@@ -1,0 +1,1 @@
+(function(d){d['el']=Object.assign(d['el']||{},{a:"Increase indent",b:"Decrease indent",c:"Αριθμημένη λίστα",d:"Λίστα κουκκίδων",e:"Έντονη",f:"Πλάγια",g:"Αναίρεση",h:"Επανάληψη",i:"Editor toolbar",j:"Show more items",k:"Επεξεργαστής Πλούσιου Κειμένου",l:"Επεξεργαστής Πλούσιου Κειμένου, 0%",m:"Dropdown toolbar"})})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

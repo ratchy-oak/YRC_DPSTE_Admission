@@ -1,0 +1,1 @@
+(function(d){d['zh-cn']=Object.assign(d['zh-cn']||{},{a:"增加缩进",b:"减少缩进",c:"编号列表",d:"项目列表",e:"加粗",f:"倾斜",g:"撤销",h:"重做",i:"编辑器工具栏",j:"显示更多",k:"富文本编辑器",l:"富文本编辑器， %0",m:"下拉工具栏"})})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

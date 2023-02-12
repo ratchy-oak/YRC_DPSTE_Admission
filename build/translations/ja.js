@@ -1,0 +1,1 @@
+(function(d){d['ja']=Object.assign(d['ja']||{},{a:"Increase indent",b:"Decrease indent",c:"番号付きリスト",d:"箇条書きリスト",e:"ボールド",f:"イタリック",g:"元に戻す",h:"やり直し",i:"Editor toolbar",j:"Show more items",k:"リッチテキストエディター",l:"リッチテキストエディター, %0",m:"Dropdown toolbar"})})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

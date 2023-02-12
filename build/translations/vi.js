@@ -1,0 +1,1 @@
+(function(d){d['vi']=Object.assign(d['vi']||{},{a:"Tăng lề",b:"Giảm lề",c:"Danh sách đánh số",d:"Danh sách đánh ký hiệu",e:"Đậm",f:"Nghiêng",g:"Hoàn tác",h:"Tiếp tục",i:"Thanh công cụ biên tập",j:"Xem thêm",k:"Trình soạn thảo văn bản",l:"Trình soạn thảo văn bản, %0",m:"Thanh công cụ danh mục"})})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

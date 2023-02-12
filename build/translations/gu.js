@@ -1,0 +1,1 @@
+(function(d){d['gu']=Object.assign(d['gu']||{},{a:"Increase indent",b:"Decrease indent",c:"Numbered List",d:"Bulleted List",e:"ઘાટુ - બોલ્ડ્",f:"ત્રાંસુ - ઇટલિક્",g:"Undo",h:"Redo",i:"Editor toolbar",j:"Show more items",k:"Rich Text Editor",l:"Rich Text Editor, %0",m:"Dropdown toolbar"})})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

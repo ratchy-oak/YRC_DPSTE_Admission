@@ -1,0 +1,1 @@
+(function(d){d['en-au']=Object.assign(d['en-au']||{},{a:"Increase indent",b:"Decrease indent",c:"Numbered List",d:"Bulleted List",e:"Bold",f:"Italic",g:"Undo",h:"Redo",i:"Editor toolbar",j:"Show more items",k:"Rich Text Editor",l:"Rich Text Editor, %0",m:"Dropdown toolbar"})})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

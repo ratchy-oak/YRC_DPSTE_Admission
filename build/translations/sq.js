@@ -1,0 +1,1 @@
+(function(d){d['sq']=Object.assign(d['sq']||{},{a:"Increase indent",b:"Decrease indent",c:"Listë me Numra",d:"Listë me Pika",e:"Trash",f:"Pjerrtë",g:"Rikthe",h:"Ribëj",i:"Editor toolbar",j:"Show more items",k:"Redaktues i Tekstit të Pasur",l:"Redaktues i Tekstit të Pasur, %0",m:"Dropdown toolbar"})})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

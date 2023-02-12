@@ -1,0 +1,1 @@
+(function(d){d['ko']=Object.assign(d['ko']||{},{a:"Increase indent",b:"Decrease indent",c:"번호매기기",d:"글머리기호",e:"굵게",f:"기울임꼴",g:"실행 취소",h:"다시 실행",i:"Editor toolbar",j:"Show more items",k:"Rich Text Editor",l:"Rich Text Editor, %0",m:"Dropdown toolbar"})})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

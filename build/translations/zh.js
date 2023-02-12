@@ -1,0 +1,1 @@
+(function(d){d['zh']=Object.assign(d['zh']||{},{a:"增加縮排",b:"減少縮排",c:"有序清單",d:"符號清單",e:"粗體",f:"斜體",g:"取消",h:"重做",i:"Editor toolbar",j:"Show more items",k:"豐富文字編輯器",l:"豐富文字編輯器，%0",m:"Dropdown toolbar"})})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

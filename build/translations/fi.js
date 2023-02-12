@@ -1,0 +1,1 @@
+(function(d){d['fi']=Object.assign(d['fi']||{},{a:"Lisää sisennystä",b:"Vähennä sisennystä",c:"Numeroitu lista",d:"Lista",e:"Lihavointi",f:"Kursivointi",g:"Peru",h:"Tee uudelleen",i:"Editor toolbar",j:"Show more items",k:"Rikas tekstieditori",l:"Rikas tekstieditori, %0",m:"Dropdown toolbar"})})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

@@ -1,0 +1,1 @@
+(function(d){d['nb']=Object.assign(d['nb']||{},{a:"Increase indent",b:"Decrease indent",c:"Nummerert liste",d:"Punktmerket liste",e:"Fet",f:"Kursiv",g:"Angre",h:"Gjør om",i:"Editor toolbar",j:"Show more items",k:"Rikteksteditor",l:"Rikteksteditor, %0",m:"Dropdown toolbar"})})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

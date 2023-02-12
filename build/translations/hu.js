@@ -1,0 +1,1 @@
+(function(d){d['hu']=Object.assign(d['hu']||{},{a:"Behúzás növelése",b:"Behúzás csökkentése",c:"Számozott lista",d:"Pontozott lista",e:"Félkövér",f:"Dőlt",g:"Visszavonás",h:"Újra",i:"Szerkesztő eszköztár",j:"További elemek",k:"Bővített szövegszerkesztő",l:"Bővített szövegszerkesztő, %0",m:"Lenyíló eszköztár"})})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

@@ -1,0 +1,1 @@
+(function(d){d['id']=Object.assign(d['id']||{},{a:"Tambah indentasi",b:"Kurangi indentasi",c:"Daftar Berangka",d:"Daftar Tak Berangka",e:"Tebal",f:"Miring",g:"Batal",h:"Lakukan lagi",i:"Alat editor",j:"Show more items",k:"Editor Teks Kaya",l:"Editor Teks Kaya, %0",m:"Alat dropdown"})})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

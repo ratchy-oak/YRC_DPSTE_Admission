@@ -1,0 +1,1 @@
+(function(d){d['ro']=Object.assign(d['ro']||{},{a:"Mărește indent",b:"Micșorează indent",c:"Listă numerotată",d:"Listă cu puncte",e:"Îngroșat",f:"Cursiv",g:"Anulare",h:"Revenire",i:"Bară editor",j:"Show more items",k:"Editor de text",l:"Editor de text, %0",m:"Bară listă opțiuni"})})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

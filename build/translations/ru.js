@@ -1,0 +1,1 @@
+(function(d){d['ru']=Object.assign(d['ru']||{},{a:"Увеличить отступ",b:"Уменьшить отступ",c:"Нумерованный список",d:"Маркированный список",e:"Жирный",f:"Курсив",g:"Отменить",h:"Повторить",i:"Editor toolbar",j:"Другие инструменты",k:"Редактор",l:"Редактор, %0",m:"Dropdown toolbar"})})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

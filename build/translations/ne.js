@@ -1,0 +1,1 @@
+(function(d){d['ne']=Object.assign(d['ne']||{},{a:"इन्डेन्ट बढाउन",b:"इन्डेन्ट घटाउन",c:"सूचीबद्ध सूची",d:"गोली चिन्ह अङ्कित सूची",e:"बोल्ड",f:"इटालिक",g:"पूर्ववत",h:"रिडु",i:"Editor toolbar",j:"Show more items",k:"धनी पाठ सम्पादक",l:"धनी पाठ सम्पादक, %0",m:"Dropdown toolbar"})})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

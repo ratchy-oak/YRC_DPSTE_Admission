@@ -1,0 +1,1 @@
+(function(d){d['eu']=Object.assign(d['eu']||{},{a:"Increase indent",b:"Decrease indent",c:"Zenbakidun zerrenda",d:"Buletdun zerrenda",e:"Lodia",f:"Etzana",g:"Desegin",h:"Berregin",i:"Editor toolbar",j:"Show more items",k:"Testu aberastuaren editorea",l:"Testu aberastuaren editorea, %0",m:"Dropdown toolbar"})})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

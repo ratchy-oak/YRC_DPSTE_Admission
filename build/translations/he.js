@@ -1,0 +1,1 @@
+(function(d){d['he']=Object.assign(d['he']||{},{a:"Increase indent",b:"Decrease indent",c:"רשימה ממוספרת",d:"רשימה מנוקדת",e:"מודגש",f:"נטוי",g:"ביטול",h:"ביצוע מחדש",i:"סרגל הכלים",j:"הצד פריטים נוספים",k:"עורך טקסט עשיר",l:"עורך טקסט עשיר, %0",m:"סרגל כלים נפתח"})})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));
