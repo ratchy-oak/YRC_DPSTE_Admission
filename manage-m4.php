@@ -121,7 +121,7 @@ $resultid_re = mysqli_query($conn, $sqlid_re);
                           <td>
                             <span class="text-primary"><?php echo convert_date_func($fetid_re['updated'], "digit"); ?></span>
                           </td>
-                          <td><a href="edit-register4-66-admin.php?s_id=<?php echo $fetid_re['u_id']; ?>" class="btn btn-primary btn-sm mt-1">แก้ไข</a>&nbsp;&nbsp;<a href="check-data-m4.php?s_id=<?php echo $fetid_re['u_id']; ?>" class="btn btn-warning btn-sm mt-1">ตรวจสอบข้อมูล</a></td>
+                          <td><a href="check-data-m4.php?s_id=<?php echo $fetid_re['u_id']; ?>" class="btn btn-warning btn-sm mt-1">ตรวจสอบข้อมูล</a></td>
                         </tr>
                       <?php
                       }

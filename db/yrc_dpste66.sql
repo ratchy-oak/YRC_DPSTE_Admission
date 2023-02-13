@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 12, 2023 at 01:28 PM
+-- Generation Time: Feb 13, 2023 at 01:42 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -312,7 +312,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`u_id`, `u_user`, `u_pass`, `u_permission`, `u_lastlogin`, `u_approve`) VALUES
-(0, 'admin238@gmail.com', 'yup238', 2, '2023-02-12 19:24:10', 1);
+(0, 'admin238@gmail.com', 'yup238', 2, '2023-02-13 07:39:39', 1);
 
 --
 -- Indexes for dumped tables

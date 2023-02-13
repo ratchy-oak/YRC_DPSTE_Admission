@@ -68,6 +68,15 @@ if (isset($_POST['edit_register'])) {
                 //move_uploaded_file($_FILES['application_paper']['tmp_name'], $target_dir . "/", $thumb1);
                 move_uploaded_file($_FILES['application_paper']['tmp_name'], $target_dir . "/" . $thumb1);
             }
+            // if ($numid == 0) {
+            $sql1 = "UPDATE `register` SET `evi_1` = '$thumb1' WHERE `register`.`id` = 1;";
+            $query1 = mysqli_query($conn, $sql1);
+            if ($query1) {
+                redirect('../register66.php?action=success3');
+            } else {
+                redirect('../register66.php?action=error');
+            }
+            // }
         }
 
         //2. แนบสำเนาบัตรประชาชน
@@ -82,6 +91,15 @@ if (isset($_POST['edit_register'])) {
             } elseif ($FileType == 'pdf') {
                 move_uploaded_file($_FILES['id_card']['tmp_name'], $target_dir . "/" . $thumb2);
             }
+            // if ($numid == 0) {
+            $sql2 = "UPDATE `register` SET `evi_2` = '$thumb2' WHERE `register`.`id` = 1;";
+            $query2 = mysqli_query($conn, $sql2);
+            if ($query2) {
+                redirect('../register66.php?action=success3');
+            } else {
+                redirect('../register66.php?action=error');
+            }
+            // }
         }
 
         //3. รูปถ่ายสีในรูปเครื่องแบบนักเรียน 
@@ -96,6 +114,15 @@ if (isset($_POST['edit_register'])) {
             } elseif ($FileType == 'pdf') {
                 move_uploaded_file($_FILES['blue_pic']['tmp_name'], $target_dir . "/" . $thumb3);
             }
+            // if ($numid == 0) {
+            $sql3 = "UPDATE `register` SET `evi_3` = '$thumb3' WHERE `register`.`id` = 1;";
+            $query3 = mysqli_query($conn, $sql3);
+            if ($query3) {
+                redirect('../register66.php?action=success3');
+            } else {
+                redirect('../register66.php?action=error');
+            }
+            // }
         }
 
         //4. เอกสารแสดงผลการเรียน 5 ภาคเรียน
@@ -115,15 +142,24 @@ if (isset($_POST['edit_register'])) {
                     move_uploaded_file($_FILES['grade_pic']['tmp_name'][$i], $target_dir . "/" . $thumb4);
                     $pattern .= $thumb4 . "#";
                 } elseif ($FileType == 'pdf') {
+
                     move_uploaded_file($_FILES['grade_pic']['tmp_name'][$i], $target_dir . "/" . $thumb4);
+
                     $pattern .= $thumb4 . "#";
                 }
+            }
+            $sql4 = "UPDATE `register` SET `evi_4` = '$pattern' WHERE `register`.`id` = 1;";
+            $query4 = mysqli_query($conn, $sql4);
+            if ($query4) {
+                redirect('../register66.php?action=success3');
+            } else {
+                redirect('../register66.php?action=error');
             }
         }
 
 
         if ($numid == 0) {
-            $sql = "UPDATE `register` SET `title` = '$title', `name` = '$name', `surname` = '$surname', `idperson` = '$idperson', `school` = '$school', `school_province` = '$school_province', `telephone` = '$telephone', `telephone2` = '$telephone2', `address` = '$address', `mu` = '$mu', `road` = '$road', `soi` = '$soi', `tumbon` = '$tumbon', `amphor` = '$amphor', `province` = '$province', `zipcode` = '$zipcode', `email` = '$email', `grade1` = '$grade1', `grade2` = '$grade2', `grade3` = '$grade3', `grade4` = '$grade4', `evi_1` = '$thumb1', `evi_2` = '$thumb2', `evi_3` = '$thumb3', `evi_4` = '$pattern' WHERE `register`.`id` = 1;";
+            $sql = "UPDATE `register` SET `title` = '$title', `name` = '$name', `surname` = '$surname', `idperson` = '$idperson', `school` = '$school', `school_province` = '$school_province', `telephone` = '$telephone', `telephone2` = '$telephone2', `address` = '$address', `mu` = '$mu', `road` = '$road', `soi` = '$soi', `tumbon` = '$tumbon', `amphor` = '$amphor', `province` = '$province', `zipcode` = '$zipcode', `email` = '$email', `grade1` = '$grade1', `grade2` = '$grade2', `grade3` = '$grade3', `grade4` = '$grade4' WHERE `register`.`id` = 1;";
             $query = mysqli_query($conn, $sql);
             if ($query) {
                 redirect('../register66.php?action=success3');
