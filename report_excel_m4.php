@@ -20,6 +20,7 @@ header('Content-Disposition: attachment; filename="m4-yrc.xls"'); # ชื่อ
     <TR>
       <th>ที่</th>
       <th>เลขประจำตัว</th>
+      <th>เลขประจำตัวประชาชน</th>
       <th>คำนำหน้า</th>
       <th>ชื่อ</th>
       <th>นามสกุล</th>
@@ -40,15 +41,19 @@ header('Content-Disposition: attachment; filename="m4-yrc.xls"'); # ชื่อ
     </TR>
     <TR>
       <?php
-      $sqlid = "select * from `register` order by id asc";
+      $sqlid = "select * from `register` where s_check!= '0' order by id asc";
       $resultid = mysqli_query($conn, $sqlid);
       $i = 0;
       while ($fet1 = mysqli_fetch_array($resultid)) {
         $i++;
+        $sqlid2 = "select u_user from `users` where u_id = '$fet1[u_id]'";
+        $resultid2 = mysqli_query($conn, $sqlid2);
+        $fet2 = mysqli_fetch_array($resultid2);
         $date_digit = convert_date_func($fet1['updated'], "digit", "datetime");
       ?>
         <TD align="center"><?php echo $i; ?></TD>
         <TD align="center"><?php echo $fet1['idregister']; ?></TD>
+        <TD align="center"><?php echo $fet2['u_user']; ?></TD>
         <TD align="center"><?php echo $fet1['title']; ?></TD>
         <TD align="center"><?php echo $fet1['name']; ?></TD>
         <TD align="center"><?php echo $fet1['surname']; ?></TD>

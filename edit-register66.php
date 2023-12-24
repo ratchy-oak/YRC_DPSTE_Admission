@@ -70,7 +70,7 @@ $num_re = mysqli_num_rows($resultid_re);
           <!-- Begin Page Content -->
           <div class="container-fluid">
             <!-- Page Heading -->
-            <h1 class="h4 mb-2 text-gray-800">สมัครคัดเลือกเข้าเรียนโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ปีการศึกษา 2566</h1>
+            <h1 class="h4 mb-2 text-gray-800">สมัครคัดเลือกเข้าเรียนโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ปีการศึกษา 2567</h1>
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
@@ -212,30 +212,45 @@ $num_re = mysqli_num_rows($resultid_re);
                             <input name="grade4" class="form-control" type="text" value="<?php echo $fetid_re['grade4']; ?>" required>
                           </div>
                           <br />
-                          <label class="col-md-10 col-sm-10 col-form-label">รูปใบสมัครเดิม</label>
-                          <a href="upload/<?php echo $_SESSION['id']; ?>/<?php echo $fetid_re['evi_1']; ?>" class="btn btn-success" target="_blank"><?php echo $fetid_re['evi_1']; ?></a><br />
+                          <?php
+                          if ($fetid_re['evi_1'] != "") { ?>
+                            <label class="col-md-10 col-sm-10 col-form-label">รูปใบสมัครเดิม</label>
+                            <a href="upload/<?php echo $_SESSION['id']; ?>/<?php echo $fetid_re['evi_1']; ?>" class="btn btn-success" target="_blank"><?php echo $fetid_re['evi_1']; ?></a><br />
+                          <?php } ?>
                           <label class="col-md-12 col-sm-12 col-form-label"><strong>แนบใบสมัคร <span style="color: red; font-weight: bold;">* ถ้าไม่เปลี่ยนแปลง ไม่ต้องอัพโหลดใหม่ ไฟล์รูปแบบ .pdf หรือ .jpeg หรือ .png</span></strong></label>
+
                           <div class="container">
                             <input type="file" name="application_paper" accept="file_extension">
                           </div>
-                          <label class="col-md-10 col-sm-10 col-form-label">สำเนาบัตรประชาชนเดิม</label>
-                          <a href="upload/<?php echo $_SESSION['id']; ?>/<?php echo $fetid_re['evi_2']; ?>" class="btn btn-success" target="_blank"><?php echo $fetid_re['evi_2']; ?></a><br />
+                          <?php
+                          if ($fetid_re['evi_2'] != "") { ?>
+                            <label class="col-md-10 col-sm-10 col-form-label">สำเนาบัตรประชาชนเดิม</label>
+                            <a href="upload/<?php echo $_SESSION['id']; ?>/<?php echo $fetid_re['evi_2']; ?>" class="btn btn-success" target="_blank"><?php echo $fetid_re['evi_2']; ?></a><br />
+                          <?php } ?>
                           <label class="col-md-12 col-sm-12 col-form-label"><strong>แนบสำเนาบัตรประชาชน <span style="color: red; font-weight: bold;">* ถ้าไม่เปลี่ยนแปลง ไม่ต้องอัพโหลดใหม่ ไฟล์รูปแบบ .pdf หรือ .jpeg หรือ .png</span></strong></label>
+
                           <div class="container">
                             <input type="file" name="id_card" accept="file_extension">
                           </div>
-                          <label class="col-md-10 col-sm-10 col-form-label">รูปถ่ายสีในรูปเครื่องแบบนักเรียนเดิม</label>
-                          <a href="upload/<?php echo $_SESSION['id']; ?>/<?php echo $fetid_re['evi_3']; ?>" class="btn btn-success" target="_blank"><?php echo $fetid_re['evi_3']; ?></a><br />
-                          <label class="col-md-12 col-sm-12 col-form-label"><strong>รูปถ่ายสีในรูปเครื่องแบบนักเรียน <span style="color: red; font-weight: bold;">* ถ้าไม่เปลี่ยนแปลง ไม่ต้องอัพโหลดใหม่ ไฟล์รูปแบบ .pdf หรือ .jpeg หรือ .png</span></strong></label>
+                          <?php
+                          if ($fetid_re['evi_3'] != "") { ?>
+                            <label class="col-md-10 col-sm-10 col-form-label">รูปถ่ายสีในรูปเครื่องแบบนักเรียนเดิม</label>
+                            <a href="upload/<?php echo $_SESSION['id']; ?>/<?php echo $fetid_re['evi_3']; ?>" class="btn btn-success" target="_blank"><?php echo $fetid_re['evi_3']; ?></a><br />
+                          <?php } ?>
+                          <label class="col-md-12 col-sm-12 col-form-label"><strong>รูปถ่ายสีในรูปเครื่องแบบนักเรียน <span style="color: red; font-weight: bold;">* ถ้าไม่เปลี่ยนแปลง ไม่ต้องอัพโหลดใหม่ ไฟล์รูปแบบ .jpeg หรือ .png</span></strong></label>
+
                           <div class="container">
                             <input type="file" name="blue_pic" accept="file_extension">
                           </div>
-                          <label class="col-md-10 col-sm-10 col-form-label">เอกสารแสดงผลการเรียน 5 ภาคเรียนเดิม</label>
+
                           <?php
                           $evi_4 = explode("#", $fetid_re['evi_4']);
+                          $i = 0;
                           foreach ($evi_4 as $e4) {
+                            ++$i;
                             if ($e4) {
                           ?>
+                              <label class="col-md-10 col-sm-10 col-form-label">เอกสารแสดงผลการเรียน 5 ภาคเรียนเดิม #<?php echo $i; ?></label>
                               <a href="upload/<?php echo $_SESSION['id']; ?>/<?php echo $e4; ?>" class="mt-1 btn btn-success" target="_blank"><?php echo $e4; ?></a><br />
                           <?php }
                           } ?>
@@ -264,7 +279,7 @@ $num_re = mysqli_num_rows($resultid_re);
           <footer class="sticky-footer bg-white">
             <div class="container my-auto">
               <div class="copyright text-center my-auto">
-                <span>Copyright &copy; 2022 Yupparaj Wittayalai School</span>
+                <span>Copyright &copy; 2024 Yupparaj Wittayalai School</span>
               </div>
             </div>
           </footer>

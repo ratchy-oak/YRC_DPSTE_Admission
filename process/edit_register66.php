@@ -69,13 +69,13 @@ if (isset($_POST['edit_register'])) {
                 move_uploaded_file($_FILES['application_paper']['tmp_name'], $target_dir . "/" . $thumb1);
             }
             // if ($numid == 0) {
-            $sql1 = "UPDATE `register` SET `evi_1` = '$thumb1' WHERE `register`.`id` = 1;";
+            $sql1 = "UPDATE `register` SET `evi_1` = '$thumb1' WHERE `u_id` = '$_SESSION[id]' LIMIT 1;";
             $query1 = mysqli_query($conn, $sql1);
-            if ($query1) {
-                redirect('../register66.php?action=success3');
-            } else {
-                redirect('../register66.php?action=error');
-            }
+            // if ($query1) {
+            //     redirect('../register66.php?action=success3');
+            // } else {
+            //     redirect('../register66.php?action=error');
+            // }
             // }
         }
 
@@ -92,13 +92,13 @@ if (isset($_POST['edit_register'])) {
                 move_uploaded_file($_FILES['id_card']['tmp_name'], $target_dir . "/" . $thumb2);
             }
             // if ($numid == 0) {
-            $sql2 = "UPDATE `register` SET `evi_2` = '$thumb2' WHERE `register`.`id` = 1;";
+            $sql2 = "UPDATE `register` SET `evi_2` = '$thumb2' WHERE `u_id` = '$_SESSION[id]' LIMIT 1;";
             $query2 = mysqli_query($conn, $sql2);
-            if ($query2) {
-                redirect('../register66.php?action=success3');
-            } else {
-                redirect('../register66.php?action=error');
-            }
+            // if ($query2) {
+            //     redirect('../register66.php?action=success3');
+            // } else {
+            //     redirect('../register66.php?action=error');
+            // }
             // }
         }
 
@@ -112,16 +112,16 @@ if (isset($_POST['edit_register'])) {
                 //$resize = resizeImage($_FILES['blue_pic']['tmp_name'], $target_dir . "/", $thumb3, '1024');
                 move_uploaded_file($_FILES['blue_pic']['tmp_name'], $target_dir . "/" . $thumb3);
             } elseif ($FileType == 'pdf') {
-                move_uploaded_file($_FILES['blue_pic']['tmp_name'], $target_dir . "/" . $thumb3);
+                redirect('../register66.php?action=error2');
             }
             // if ($numid == 0) {
-            $sql3 = "UPDATE `register` SET `evi_3` = '$thumb3' WHERE `register`.`id` = 1;";
+            $sql3 = "UPDATE `register` SET `evi_3` = '$thumb3' WHERE `u_id` = '$_SESSION[id]' LIMIT 1;";
             $query3 = mysqli_query($conn, $sql3);
-            if ($query3) {
-                redirect('../register66.php?action=success3');
-            } else {
-                redirect('../register66.php?action=error');
-            }
+            // if ($query3) {
+            //     redirect('../register66.php?action=success3');
+            // } else {
+            //     redirect('../register66.php?action=error');
+            // }
             // }
         }
 
@@ -129,8 +129,13 @@ if (isset($_POST['edit_register'])) {
         // $sqlid = "select evi_4 from `register` where u_id='$_SESSION[id]' LIMIT 1";
         // $resultid = mysqli_query($conn, $sqlid);
         // $fetid = mysqli_fetch_array($resultid);
-        if ($_FILES['grade_pic']['name'] != "") {
+        //print_r($_FILES['grade_pic']['name']);
+        //exit();
+        if ($_FILES['grade_pic']['name'][0] != "") {
+            //print_r($_FILES['grade_pic']['tmp_name']);
             $pattern = '';
+            //echo "exit";
+            //exit();
             for ($i = 0; $i < count($_FILES["grade_pic"]["name"]); $i++) {
                 $target_file = basename($_FILES['grade_pic']['name'][$i]);
                 $FileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -148,25 +153,27 @@ if (isset($_POST['edit_register'])) {
                     $pattern .= $thumb4 . "#";
                 }
             }
-            $sql4 = "UPDATE `register` SET `evi_4` = '$pattern' WHERE `register`.`id` = 1;";
+            //echo $pattern;
+            //exit();
+            $sql4 = "UPDATE `register` SET `evi_4` = '$pattern' WHERE `u_id` = '$_SESSION[id]' LIMIT 1;";
             $query4 = mysqli_query($conn, $sql4);
-            if ($query4) {
-                redirect('../register66.php?action=success3');
-            } else {
-                redirect('../register66.php?action=error');
-            }
+            // if ($query4) {
+            //     redirect('../register66.php?action=success3');
+            // } else {
+            //     redirect('../register66.php?action=error');
+            // }
         }
 
 
-        if ($numid == 0) {
-            $sql = "UPDATE `register` SET `title` = '$title', `name` = '$name', `surname` = '$surname', `idperson` = '$idperson', `school` = '$school', `school_province` = '$school_province', `telephone` = '$telephone', `telephone2` = '$telephone2', `address` = '$address', `mu` = '$mu', `road` = '$road', `soi` = '$soi', `tumbon` = '$tumbon', `amphor` = '$amphor', `province` = '$province', `zipcode` = '$zipcode', `email` = '$email', `grade1` = '$grade1', `grade2` = '$grade2', `grade3` = '$grade3', `grade4` = '$grade4' WHERE `register`.`id` = 1;";
-            $query = mysqli_query($conn, $sql);
-            if ($query) {
-                redirect('../register66.php?action=success3');
-            } else {
-                redirect('../register66.php?action=error');
-            }
+        //if ($numid == 0) {
+        $sql = "UPDATE `register` SET `title` = '$title', `name` = '$name', `surname` = '$surname', `idperson` = '$idperson', `school` = '$school', `school_province` = '$school_province', `telephone` = '$telephone', `telephone2` = '$telephone2', `address` = '$address', `mu` = '$mu', `road` = '$road', `soi` = '$soi', `tumbon` = '$tumbon', `amphor` = '$amphor', `province` = '$province', `zipcode` = '$zipcode', `email` = '$email', `grade1` = '$grade1', `grade2` = '$grade2', `grade3` = '$grade3', `grade4` = '$grade4' WHERE `u_id` = '$_SESSION[id]' LIMIT 1;";
+        $query = mysqli_query($conn, $sql);
+        if ($query) {
+            redirect('../register66.php?action=success3');
+        } else {
+            redirect('../register66.php?action=error');
         }
+        //}
     } else {
         redirect('../register66.php?action=error');
     }

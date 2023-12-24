@@ -65,7 +65,7 @@ $fetid_re = mysqli_fetch_array($resultid_re);
           <div class="container-fluid">
 
             <!-- Page Heading -->
-            <h1 class="h3 mb-2 text-gray-800">ข้อมูลการสมัคร ชั้น ม.1 ของ <?php echo $fetid_re['title'] . $fetid_re['name'] . "&nbsp;&nbsp;&nbsp;" . $fetid_re['surname']; ?></h1>
+            <h1 class="h3 mb-2 text-gray-800">ข้อมูลการสมัครคัดเลือกเข้าเรียนโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ปีการศึกษา 2567<br />ของ <?php echo $fetid_re['title'] . $fetid_re['name'] . "&nbsp;&nbsp;&nbsp;" . $fetid_re['surname']; ?></h1>
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
@@ -85,7 +85,7 @@ $fetid_re = mysqli_fetch_array($resultid_re);
                     <strong>ลบข้อมูลสำเร็จ!</strong>
                   </div>
                 <?php } elseif ($action == 'success3') { ?>
-                  <div class="alert alert-danger fade show">
+                  <div class="alert alert-success fade show">
                     <span class="close" data-dismiss="alert">×</span>
                     <strong>แก้ไขข้อมูลสำเร็จ!</strong>
                   </div>
@@ -131,7 +131,7 @@ $fetid_re = mysqli_fetch_array($resultid_re);
                     </thead>
                     <tbody>
                       <tr>
-                        <td width="30%">
+                        <td width="20%">
                           <?php if ($fetid_re['s_check'] == "1") { ?>
                             <a class="nav-link" href="print4-66-admin.php?idstudent=<?php echo $fetid_re['idregister']; ?>">
                               <button class="btn btn-success" style="color: white;">
@@ -140,8 +140,8 @@ $fetid_re = mysqli_fetch_array($resultid_re);
                             </a>
                             <!-- <span class="btn btn-success btn-md">ยืนยันข้อมูลการสมัคร</span><br> -->
                           <?php } ?>
-                          <span class="text-primary"><u style="font-size: 0.9rem; font-weight: bold;">วันที่สมัคร:</u> <?php echo convert_date_func($fetid_re['updated'], "digit", "datetime"); ?></span><br>
-                          <span class="text-primary"><u style="font-size: 0.9rem; font-weight: bold;">เลขประจำตัวสอบ:</u> <?php echo ($fetid_re['idregister'] === '0') ? "-" : $fetid_re['idregister']; ?></span><br>
+                          <span class="text-primary"><u style="font-size: 0.9rem; font-weight: bold;">วันที่สมัคร:</u> <?php echo convert_date_func($fetid_re['datet'], "digit", "datetime"); ?></span><br>
+                          <span class="text-primary"><u style="font-size: 0.9rem; font-weight: bold;">เลขประจำตัวสอบ:</u> <?php echo ($fetid_re['s_check'] == '0' && $fetid_re['idregister'] == '0') ? "-" : $fetid_re['idregister']; ?></span><br>
                           <span style="color: green;"><u style="font-size: 0.9rem; font-weight: bold;">ข้อมูลส่วนตัว</u></span>
                           <p style="font-size: 0.9rem; padding-top:6px; margin:0;"><?php echo $fetid_re['title'] . $fetid_re['name'] . "&nbsp;&nbsp;&nbsp;&nbsp;" . $fetid_re['surname']; ?></p>
                           <p style="font-size: 0.9rem; padding-top:6px; margin:0;">โรงเรียน: <?php echo $fetid_re['school']; ?></p>
@@ -162,12 +162,10 @@ $fetid_re = mysqli_fetch_array($resultid_re);
                           <span style="font-size: 0.9rem; color: green; font-weight: bold;">โทรศัพท์ที่ติดต่อได้</span>
                           <p style="font-size: 0.9rem; padding-top:6px; margin:0;">โทรศัพท์นักเรียน: <?php echo $fetid_re['telephone']; ?></p>
                           <p style="font-size: 0.9rem; padding-top:6px; margin:0;">โทรศัพท์ผู้ปกครอง: <?php echo $fetid_re['telephone2']; ?></p><br>
-
+                          <p><strong>แจ้งข้อความ:</strong></p>
                           <form action="./process/add_comment1.php" method="post" name="comment-form">
-                            แจ้งข้อความ:
-                            <textarea name="content" id="editor" class="editor">
-                                        <?php echo $fetid_re['comment']; ?>
-                                      </textarea>
+
+                            <textarea name="content" id="editor" class="editor"><?php echo $fetid_re['comment']; ?></textarea>
                             <br>
                             <input type="hidden" id="s_id" name="s_id" value="<?php echo $sid; ?>">
                             <button name="add_comment" type="submit" class="btn btn-primary btn-sm">บันทึก</button>
@@ -175,11 +173,11 @@ $fetid_re = mysqli_fetch_array($resultid_re);
                         </td>
                         <td>
                           <span style="color: green;"><u style="font-weight: bold;">หลักฐานการสมัคร</u><br>
-                            <p style="color: green; font-size: 0.95rem;" class="mb-1">&#128181; <b>เปิดระบบ วันอังคารที่ 14 กุมภาพันธ์ 2566 เวลา 08.30 น.</b><br />
-                            <p style="color: red; font-size: 0.95rem;" class="mb-1">&#128181; <b>ปิดระบบ วันเสาร์ที่ 18 กุมภาพันธ์ 2566 เวลา 16.30 น.</b></p>
+                            <p style="color: green; font-size: 0.95rem;" class="mb-1">&#128181; <b>เปิดระบบ วันจันทร์ที่ 8 มกราคม 2567 เวลา 08.30 น.</b><br />
+                            <p style="color: red; font-size: 0.95rem;" class="mb-1">&#128181; <b>ปิดระบบ วันอาทิตย์ที่ 14 มกราคม 2567 เวลา 16.30 น.</b></p>
                             <table class="table table-bordered" width="100%" cellspacing="0">
                               <tr>
-                                <td>
+                                <td width="200">
                                   รูปถ่ายสีในรูปเครื่องแบบนักเรียน<br>
                                 </td>
                                 <td>
@@ -216,9 +214,21 @@ $fetid_re = mysqli_fetch_array($resultid_re);
                                 </td>
                                 <td>
                                   <?php
-                                  if ($fetid_re['evi_2'] != "0") { ?>
-                                    <a href="upload/<?php echo $fetid_re['u_id']; ?>/<?php echo $fetid_re['evi_2']; ?>" target="_blank"><img class="img-fluid" src="upload/<?php echo $fetid_re['u_id']; ?>/<?php echo $fetid_re['evi_2']; ?>" alt=""></a>
-                                  <?php } ?>
+                                  if ($fetid_re['evi_2'] != "0") {
+
+                                    $FileType = strtolower(pathinfo($fetid_re['evi_2'], PATHINFO_EXTENSION));
+                                    //echo $FileType;
+                                    if ($FileType != "pdf") {
+                                  ?>
+                                      <a href="upload/<?php echo $fetid_re['u_id']; ?>/<?php echo $fetid_re['evi_2']; ?>" target="_blank"><img class="img-fluid" src="upload/<?php echo $fetid_re['u_id']; ?>/<?php echo $fetid_re['evi_2']; ?>" alt=""></a>
+                                    <?php } else { ?>
+                                      <div class="embed-responsive" style="padding-bottom: 141.42%;">
+                                        <object class="embed-responsive-item" data="upload/<?php echo $fetid_re['u_id']; ?>/<?php echo $fetid_re['evi_2']; ?>" type="application/pdf" internalinstanceid="9" title="">
+                                        </object>
+                                      </div>
+
+                                  <?php }
+                                  } ?>
                                 </td>
                               </tr>
                               <tr>
@@ -226,29 +236,40 @@ $fetid_re = mysqli_fetch_array($resultid_re);
                                   เอกสารแสดงผลการเรียน 5 ภาคเรียน<br>
                                 </td>
                                 <td>
-                                  <ul style="margin:0; padding: 0; list-style-type: none;">
-                                    <?php
-                                    if ($fetid_re['evi_4'] != "0") {
-                                      $f6 = explode("#", $fetid_re['evi_4']);
-                                      foreach ($f6 as $key => $row) {
-                                        if ($row) {
-                                          $f6ck = explode(".", $row);
-                                    ?>
+                                <ul style="margin:0; padding: 0; list-style-type: none;">
+                                  <?php
+                                  if ($fetid_re['evi_4'] != "0") {
+                                    $f6 = explode("#", $fetid_re['evi_4']);
+                                    //print_r($f6);
+                                    foreach ($f6 as $row) {
+                                      if ($row) {
+                                        $f6ck = explode(".", $row);
+                                        //echo $FileType;
+                                        //echo $row;
+                                        //exit();
+                                        if ($f6ck[1] != "pdf") {
+                                  ?>
                                           <li>
-                                            <a href="upload/<?php echo $fetid_re['u_id']; ?>/<?php echo $fetid_re['evi_4']; ?>" target="_blank"><img class="img-fluid" src="upload/<?php echo $fetid_re['u_id']; ?>/<?php echo $row; ?>" alt=""></a>
+                                            <a href="upload/<?php echo $fetid_re['u_id']; ?>/<?php echo $row; ?>" target="_blank"><img class="img-fluid" src="upload/<?php echo $fetid_re['u_id']; ?>/<?php echo $row; ?>" alt=""></a>
                                           </li>
-                                    <?php
+                                        <?php } else { ?>
+                                          <div class="embed-responsive" style="margin: 10px 0; padding-bottom: 141.42%;">
+                                            <object class="embed-responsive-item" data="upload/<?php echo $fetid_re['u_id']; ?>/<?php echo $row; ?>" type="application/pdf" internalinstanceid="9" title="">
+                                            </object>
+                                          </div>
+                                  <?php
                                         }
                                       }
                                     }
-                                    ?>
-                                  </ul>
-
+                                  }
+                                  ?>
+                                </ul>
                                 </td>
                               </tr>
                             </table>
                         </td>
                         <td>
+                          <a href="edit-register66-admin.php?u_id=<?php echo $fetid_re['u_id']; ?>&edit=<?php echo password_generate(7); ?>" class="btn btn-primary btn-sm mb-1">แก้ไข</a>
                           <form action="./process/add_check1.php" method="post" enctype="multipart/form-data" name="comment-form">
                             <input type="hidden" id="u_id" name="u_id" value="<?php echo $fetid_re['u_id']; ?>">
                             <?php if ($fetid_re['s_check'] == "0") {
@@ -269,7 +290,7 @@ $fetid_re = mysqli_fetch_array($resultid_re);
             <footer class="sticky-footer bg-white">
               <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                  <span>Copyright &copy; 2023 Yupparaj Wittayalai School</span>
+                  <span>Copyright &copy; 2024 Yupparaj Wittayalai School</span>
                 </div>
               </div>
             </footer>

@@ -5,8 +5,12 @@ if ($_SESSION['permission'] != '2') {
     header('Location: login.php');
     exit();
 }
-$datetd = date('Y-m-d');
-$datetdigit = convert_date_func($datetd, 'full');
+//$datetd = date('Y-m-d');
+
+if ($_GET['idstudent'] == "") {
+    header('Location: index.php');
+    exit();
+}
 
 $idstudent = $_GET['idstudent'];
 
@@ -14,6 +18,8 @@ $sql = "select * from `register` where idregister='$idstudent' and s_check ='1' 
 $result = mysqli_query($conn, $sql);
 $num = mysqli_num_rows($result);
 $fet = mysqli_fetch_array($result);
+$datetdigit = convert_date_func($fet['datet'], 'full');
+$datetdigit2 = convert_date_func($fet['updated'], 'full');
 
 if ($num == 0) {
     header('Location: index.php');
@@ -180,7 +186,7 @@ $build1 = str_split($testroom);
                         <strong>โรงเรียนยุพราชวิทยาลัย</strong><br />
                         <strong>โครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ศูนย์โรงเรียนยุพราชวิทยาลัย</strong><br />
                         238 ถนนพระปกเกล้า ตำบลศรีภูมิ<br>
-                        อำเภอเมือง จังหวัดเชียงใหม่ 50200 โทรศัพท์ 053-418673-5
+                        อำเภอเมือง จังหวัดเชียงใหม่ 50200 โทรศัพท์ 061-4268117
                     </td>
                 </tr>
             </table>
@@ -188,14 +194,13 @@ $build1 = str_split($testroom);
 
             <p style="padding-top: 15px; font-weight: 700;">บัตรประจำตัวสอบ สมัครคัดเลือกเข้าเรียน ชั้น ม.4 ปีการศึกษา 2566</p>
             <p style="padding-top: 8px; font-weight: 700;">โครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ศูนย์โรงเรียนยุพราชวิทยาลัย</p>
-            <p style="padding-top: 25px; font-size: 15px; font-weight: 700;"><u>ข้อมูลผู้สมัคร</u></p>
+            <p style="padding-top: 15px; font-size: 15px; font-weight: 700;"><u>ข้อมูลผู้สมัคร</u></p>
             <p style="padding-top: 8px; font-size: 15px;"><strong>ชื่อ - สกุล</strong>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $fet['title'] .
                                                                                                                     $fet['name'] .
                                                                                                                     '&nbsp;&nbsp;&nbsp;&nbsp;' .
                                                                                                                     $fet['surname']; ?></p>
-            <p style="padding-top: 8px; font-size: 15px;"><strong>โรงเรียน</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $fet['school']; ?></p>
+            <p style="padding: 8px 0 8px 0; font-size: 15px;"><strong>โรงเรียน</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $fet['school']; ?></p>
 
-            <br />
             <table width="70%" cellSpacing="0">
                 <tr>
                     <td style="border-top:1px solid #000; border-left:1px solid #000; border-bottom:1px solid #000; padding: 8px; background-color:#eee; font-weight:bold; text-align:center;">เลขประจำตัวสอบ</td>
@@ -220,29 +225,30 @@ $build1 = str_split($testroom);
                 </tr>
             </table>
 
-            <p style="padding-top: 20px; font-size: 15px; font-weight: 700;"><u>กำหนดการสอบข้อเขียน</u></p>
+            <p style="padding-top: 15px; font-size: 15px; font-weight: 700;"><u>กำหนดการสอบข้อเขียน</u></p>
             <p style="padding-top: 8px; font-size: 15px;">
                 <strong><u>สอบข้อเขียน</u></strong>&nbsp;&nbsp;&nbsp;&nbsp;สอบวันอาทิตย์&nbsp;&nbsp;ที่&nbsp;&nbsp;26&nbsp;&nbsp;กุมภาพันธ์&nbsp;&nbsp;พ.ศ.&nbsp;&nbsp;2566
             </p>
             <p style="padding-top: 8px; padding-left:40px; font-size: 15px;">
                 <strong>เวลา&nbsp;&nbsp;&nbsp;08.30&nbsp;&nbsp;-&nbsp;&nbsp;10.00
-                    น.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>วิชาคณิตศาสตร์
-                และวิชาวิทยาศาสตร์&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    น.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>วิชาคณิตศาสตร์&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </p>
             <p style="padding-top: 8px; padding-left:40px; font-size: 15px;">
                 <strong>เวลา&nbsp;&nbsp;&nbsp;10.30&nbsp;&nbsp;-&nbsp;&nbsp;12.00
                     น.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>วิชาวิทยาศาสตร์&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </p>
 
-            <p style="text-align: center; padding-top: 35px; font-size: 15px;">
+            <div style="float: left; padding: 10px 20px 0 50px;"><img width="136" src="./img/qr.png" alt=""></div>
+
+            <p style="text-align: left; padding-top: 35px; font-size: 15px;">
                 <strong>*** โปรดติดตามข้อมูลข่าวสาร ***</strong>
             </p>
 
-            <p style="text-align: center; padding-top: 10px; font-size: 15px;">
-                <strong>*** ผ่านทางเพจโครงการ พสวท. และโครงการ พสวท. สู่ความเป็นเลิศ ศูนย์โรงเรียนยุพราชวิทยาลัย ***</strong>
+            <p style="text-align: left; padding-top: 10px; font-size: 15px;">
+                <strong>ผ่านทางเพจโครงการ พสวท. และ พสวท. สู่ความเป็นเลิศ<br />ศูนย์โรงเรียนยุพราชวิทยาลัย</strong>
             </p>
 
-            <p style="padding-top: 35px; font-size: 15px;"><strong>
+            <p style="padding-top: 50px; font-size: 15px;"><strong>
                     <u>ข้อแนะนำและอุปกรณ์ที่ต้องนำมาในวันสอบข้อเขียน</u></strong></p>
             <p style="padding-top: 8px; font-size: 15px;">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.&nbsp;&nbsp;แต่งกายด้วยเครื่องแบบนักเรียนเท่านั้น
@@ -284,11 +290,13 @@ $build1 = str_split($testroom);
                     <td style="line-height: 25px; font-size: 14px;" align="center" valign="top">
                         <?php echo $datetdigit; ?></td>
                     <td style="line-height: 25px; font-size: 14px;" align="center" valign="top">
-                        <?php echo $datetdigit; ?></td>
+                        <?php echo $datetdigit2; ?></td>
                 </tr>
             </table>
         </div>
     </div>
 
-</html>
+
 </body>
+
+</html>

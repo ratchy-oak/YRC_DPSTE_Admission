@@ -59,7 +59,7 @@ $resultid_re = mysqli_query($conn, $sqlid_re);
           <div class="container-fluid">
 
             <!-- Page Heading -->
-            <h1 class="h3 mb-2 text-gray-800">ข้อมูลการสมัครคัดเลือกเข้าเรียนโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ปีการศึกษา 2566 (ยืนยันข้อมูล)</h1>
+            <h1 class="h4 mb-2 text-gray-800">ข้อมูลการสมัครคัดเลือกเข้าเรียนโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ปีการศึกษา 2567 (ยืนยันข้อมูล)</h1>
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
@@ -104,7 +104,7 @@ $resultid_re = mysqli_query($conn, $sqlid_re);
                         <th>โรงเรียน</th>
                         <th>เบอร์โทรศัพท์</th>
                         <th>เบอร์โทรศัพท์ผู้ปกครอง</th>
-                        <th>วันที่สมัคร</th>
+                        <th>วันที่ยืนยัน</th>
                         <th>ตรวจสอบข้อมูล</th>
                       </tr>
                     </thead>
@@ -143,7 +143,7 @@ $resultid_re = mysqli_query($conn, $sqlid_re);
           <footer class="sticky-footer bg-white">
             <div class="container my-auto">
               <div class="copyright text-center my-auto">
-                <span>Copyright &copy; 2023 Yupparaj Wittayalai School</span>
+                <span>Copyright &copy; 2024 Yupparaj Wittayalai School</span>
               </div>
             </div>
           </footer>

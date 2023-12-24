@@ -89,7 +89,7 @@ if (isset($_POST['approve_application'])) {
             //$resize = resizeImage($_FILES['blue_pic']['tmp_name'], $target_dir . "/", $thumb3, '1024');
             move_uploaded_file($_FILES['blue_pic']['tmp_name'], $target_dir . "/" . $thumb3);
         } elseif ($FileType == 'pdf') {
-            move_uploaded_file($_FILES['blue_pic']['tmp_name'], $target_dir . "/" . $thumb3);
+            redirect('../application-form.php?action=uploadError1');
         }
 
         //4. เอกสารแสดงผลการเรียน 5 ภาคเรียน
@@ -116,15 +116,15 @@ if (isset($_POST['approve_application'])) {
         }
 
         if ($numid == 0) {
-            $sql = "INSERT INTO `register` (`id`, `u_id`, `idregister`, `title`, `name`, `surname`, `idperson`, `school`, `school_province`, `telephone`, `telephone2`, `address`, `mu`, `road`, `soi`, `tumbon`, `amphor`, `province`,`zipcode`,`email`, `grade1`, `grade2`, `grade3`, `grade4`, `evi_1`, `evi_2`, `evi_3`, `evi_4`, `s_check`, `updated`) VALUES (NULL, '$name_folder', '0', '$title', '$name', '$surname', '$idperson', '$school', '$school_province', '$telephone', '$telephone2', '$address', '$mu', '$road', '$soi', '$tumbon', '$amphor', '$province','$zipcode', '$email', '$grade1', '$grade2', '$grade3', '$grade4', '$thumb1', '$thumb2', '$thumb3', '$pattern', '0', current_timestamp());";
+            $sql = "INSERT INTO `register` (`id`, `u_id`, `idregister`, `title`, `name`, `surname`, `idperson`, `school`, `school_province`, `telephone`, `telephone2`, `address`, `mu`, `road`, `soi`, `tumbon`, `amphor`, `province`,`zipcode`,`email`, `grade1`, `grade2`, `grade3`, `grade4`, `evi_1`, `evi_2`, `evi_3`, `evi_4`, `s_check`, `datet`, `updated`) VALUES (NULL, '$name_folder', '0', '$title', '$name', '$surname', '$idperson', '$school', '$school_province', '$telephone', '$telephone2', '$address', '$mu', '$road', '$soi', '$tumbon', '$amphor', '$province','$zipcode', '$email', '$grade1', '$grade2', '$grade3', '$grade4', '$thumb1', '$thumb2', '$thumb3', '$pattern', '0', current_timestamp(), '0000-00-00 00:00:00');";
             $query = mysqli_query($conn, $sql);
             if ($query) {
                 redirect('../register66.php?action=uploadSuccess');
             } else {
-                redirect('../register66.php?action=uploadError3');
+                redirect('../application-form.php?action=uploadError2');
             }
         }
     } else {
-        redirect('../register66.php?action=uploadError');
+        redirect('../application-form.php?action=uploadError3');
     }
 }

@@ -69,7 +69,7 @@ $fet2 = mysqli_fetch_array($query2);
                 <div class=" card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters">
-                    <img src="img/index_intro_op.png" style="max-width: 100%;">
+                    <img src="img/7B78BABE-BEF7-408D-91C3-CFF8E8FCAF85.png" style="max-width: 100%;">
                   </div>
                 </div>
               </div>
@@ -87,7 +87,7 @@ $fet2 = mysqli_fetch_array($query2);
     <footer class="sticky-footer bg-white">
       <div class="container my-auto">
         <div class="copyright text-center my-auto">
-          <span>Copyright &copy; 2023 Yupparaj Wittayalai School</span>
+          <span>Copyright &copy; 2024 Yupparaj Wittayalai School</span>
         </div>
       </div>
     </footer>

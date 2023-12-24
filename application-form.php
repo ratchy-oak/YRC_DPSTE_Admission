@@ -63,14 +63,40 @@ $fet_user = mysqli_fetch_array($result_user);
                     <!-- Begin Page Content -->
                     <div class="container-fluid">
                         <!-- Page Heading -->
-                        <h1 class="h4 mb-2 text-gray-800">สมัครคัดเลือกเข้าเรียนโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ปีการศึกษา 2566</h1>
+                        <h1 class="h4 mb-2 text-gray-800">สมัครคัดเลือกเข้าเรียนโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ปีการศึกษา 2567</h1>
                         <!-- DataTales Example -->
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
                                 <h6 class="m-0 font-weight-bold text-primary">ข้อมูล</h6>
                             </div>
                             <div class="card-body">
-
+                                <?php
+                                isset($_GET['action']) ? ($action = $_GET['action']) : ($action = '');
+                                if ($action == 'success') { ?>
+                                    <div class="alert alert-success fade show">
+                                        <span class="close" data-dismiss="alert">×</span>
+                                        <strong>บันทึกข้อมูลสำเร็จ!</strong>
+                                    </div>
+                                <?php } elseif ($action == 'uploadError1') { ?>
+                                    <div class="alert alert-danger fade show">
+                                        <span class="close" data-dismiss="alert">×</span>
+                                        <strong>รูปถ่าย ใช้ไฟล์นามสกุล .jpeg .jpg เท่านั้น!</strong>
+                                    </div>
+                                <?php
+                                } elseif ($action == 'uploadError2') { ?>
+                                    <div class="alert alert-danger fade show">
+                                        <span class="close" data-dismiss="alert">×</span>
+                                        <strong>บันทึกข้อมูลไม่สำเร็จ !!</strong>
+                                    </div>
+                                <?php
+                                } elseif ($action == 'uploadError3') { ?>
+                                    <div class="alert alert-danger fade show">
+                                        <span class="close" data-dismiss="alert">×</span>
+                                        <strong>บันทึกข้อมูลไม่สำเร็จ !!</strong>
+                                    </div>
+                                <?php
+                                }
+                                ?>
                                 <!-- begin col-6 -->
 
                                 <form method="POST" action="./process/add-application.php" enctype="multipart/form-data">
@@ -206,15 +232,15 @@ $fet_user = mysqli_fetch_array($result_user);
                                                 </div>
                                                 <label class="mt-4 col-md-12 col-sm-12 col-form-label"><strong>แนบใบสมัคร <span style="color: red; font-weight: bold;">* ไฟล์รูปแบบ .pdf หรือ .jpeg หรือ .png</span></strong></label>
                                                 <div class="container">
-                                                    <input type="file" name="application_paper" accept="file_extension">
+                                                    <input type="file" name="application_paper" accept="file_extension" required>
                                                 </div>
                                                 <label class="col-md-12 col-sm-12 col-form-label"><strong>แนบสำเนาบัตรประชาชน <span style="color: red; font-weight: bold;">* ไฟล์รูปแบบ .pdf หรือ .jpeg หรือ .png</span></strong></label>
                                                 <div class="container">
-                                                    <input type="file" name="id_card" accept="file_extension">
+                                                    <input type="file" name="id_card" accept="file_extension" required>
                                                 </div>
-                                                <label class="col-md-12 col-sm-12 col-form-label"><strong>รูปถ่ายสีในรูปเครื่องแบบนักเรียน <span style="color: red; font-weight: bold;">* ไฟล์รูปแบบ .pdf หรือ .jpeg หรือ .png</span></strong></label>
+                                                <label class="col-md-12 col-sm-12 col-form-label"><strong>รูปถ่ายสีในรูปเครื่องแบบนักเรียน <span style="color: red; font-weight: bold;">* ไฟล์รูปแบบ .jpeg หรือ .png</span></strong></label>
                                                 <div class="container">
-                                                    <input type="file" name="blue_pic" accept="file_extension">
+                                                    <input type="file" name="blue_pic" accept="file_extension" required>
                                                 </div>
                                                 <label class="col-md-12 col-sm-12 col-form-label"><strong>เอกสารแสดงผลการเรียน 5 ภาคเรียน <span style="color: red; font-weight: bold;">* ใส่ได้หลายไฟล์ ไฟล์รูปแบบ .pdf หรือ .jpeg หรือ .png</span></strong></label>
                                                 <div class="container">
@@ -243,7 +269,7 @@ $fet_user = mysqli_fetch_array($result_user);
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; 2023 Yupparaj Wittayalai School</span>
+                        <span>Copyright &copy; 2024 Yupparaj Wittayalai School</span>
                     </div>
                 </div>
             </footer>

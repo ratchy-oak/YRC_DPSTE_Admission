@@ -4,10 +4,11 @@ include '../includes/function.php';
 if (!isset($_SESSION['loggedin']) and $_SESSION['permission'] != '2') {
     header('Location: ../login.php');
     exit();
-  }
+}
 
 if (isset($_POST['edit_register_admin'])) {
-    $name_folder = $_SESSION['id'];
+    $u_id = $_POST['u_id'];
+    $name_folder = $u_id;
     if (file_exists("../upload/$name_folder")) {
         $target_dir = "../upload/$name_folder";
         $checkOK = 1;
@@ -60,77 +61,126 @@ if (isset($_POST['edit_register_admin'])) {
         $grade4 = $_POST['grade4'];
         //echo "checkOK";
         //1.แนบใบสมัคร
-        $target_file = basename($_FILES['application_paper']['name']);
-        $FileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-        $rand = rand(1, 1000000);
-        $thumb1 = 'thumb1' . $name_folder . 'r' . $rand . '.' . $FileType;
-        if ($FileType == 'jpg' or $FileType == 'png' or $FileType == 'jpeg') {
-            //$resize = resizeImage($_FILES['application_paper']['tmp_name'], $target_dir . "/", $thumb1, '1024');
-            move_uploaded_file($_FILES['application_paper']['tmp_name'], $target_dir . "/" . $thumb1);
-        } elseif ($FileType == 'pdf') {
-            //move_uploaded_file($_FILES['application_paper']['tmp_name'], $target_dir . "/", $thumb1);
-            move_uploaded_file($_FILES['application_paper']['tmp_name'], $target_dir . "/" . $thumb1);
+        if ($_FILES['application_paper']['name'] != "") {
+            $target_file = basename($_FILES['application_paper']['name']);
+            $FileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+            $rand = rand(1, 1000000);
+            $thumb1 = 'thumb1' . $name_folder . 'r' . $rand . '.' . $FileType;
+            if ($FileType == 'jpg' or $FileType == 'png' or $FileType == 'jpeg') {
+                //$resize = resizeImage($_FILES['application_paper']['tmp_name'], $target_dir . "/", $thumb1, '1024');
+                move_uploaded_file($_FILES['application_paper']['tmp_name'], $target_dir . "/" . $thumb1);
+            } elseif ($FileType == 'pdf') {
+                //move_uploaded_file($_FILES['application_paper']['tmp_name'], $target_dir . "/", $thumb1);
+                move_uploaded_file($_FILES['application_paper']['tmp_name'], $target_dir . "/" . $thumb1);
+            }
+            // if ($numid == 0) {
+            $sql1 = "UPDATE `register` SET `evi_1` = '$thumb1' WHERE `u_id` = '$u_id' LIMIT 1;";
+            $query1 = mysqli_query($conn, $sql1);
+            // if ($query1) {
+            //     redirect('../check-data-m4.php?action=success3');
+            // } else {
+            //     redirect('../check-data-m4.php?action=error');
+            // }
+            // }
         }
 
         //2. แนบสำเนาบัตรประชาชน
-        $target_file = basename($_FILES['id_card']['name']);
-        $FileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-        $rand = rand(1, 1000000);
-        $thumb2 = 'thumb2' . $name_folder . 'r' . $rand . '.' . $FileType;
-        if ($FileType == 'jpg' or $FileType == 'png' or $FileType == 'jpeg') {
-            //$resize = resizeImage($_FILES['id_card']['tmp_name'], $target_dir . "/", $thumb2, '1024');
-            move_uploaded_file($_FILES['id_card']['tmp_name'], $target_dir . "/" . $thumb2);
-        } elseif ($FileType == 'pdf') {
-            move_uploaded_file($_FILES['id_card']['tmp_name'], $target_dir . "/" . $thumb2);
+        if ($_FILES['id_card']['name'] != "") {
+            $target_file = basename($_FILES['id_card']['name']);
+            $FileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+            $rand = rand(1, 1000000);
+            $thumb2 = 'thumb2' . $name_folder . 'r' . $rand . '.' . $FileType;
+            if ($FileType == 'jpg' or $FileType == 'png' or $FileType == 'jpeg') {
+                //$resize = resizeImage($_FILES['id_card']['tmp_name'], $target_dir . "/", $thumb2, '1024');
+                move_uploaded_file($_FILES['id_card']['tmp_name'], $target_dir . "/" . $thumb2);
+            } elseif ($FileType == 'pdf') {
+                move_uploaded_file($_FILES['id_card']['tmp_name'], $target_dir . "/" . $thumb2);
+            }
+            // if ($numid == 0) {
+            $sql2 = "UPDATE `register` SET `evi_2` = '$thumb2' WHERE `u_id` = '$u_id' LIMIT 1;";
+            $query2 = mysqli_query($conn, $sql2);
+            // if ($query2) {
+            //     redirect('../check-data-m4.php?action=success3');
+            // } else {
+            //     redirect('../check-data-m4.php?action=error');
+            // }
+            // }
         }
 
         //3. รูปถ่ายสีในรูปเครื่องแบบนักเรียน 
-        $target_file = basename($_FILES['blue_pic']['name']);
-        $FileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-        $rand = rand(1, 1000000);
-        $thumb3 = 'thumb3' . $name_folder . 'r' . $rand . '.' . $FileType;
-        if ($FileType == 'jpg' or $FileType == 'png' or $FileType == 'jpeg') {
-            //$resize = resizeImage($_FILES['blue_pic']['tmp_name'], $target_dir . "/", $thumb3, '1024');
-            move_uploaded_file($_FILES['blue_pic']['tmp_name'], $target_dir . "/" . $thumb3);
-        } elseif ($FileType == 'pdf') {
-            move_uploaded_file($_FILES['blue_pic']['tmp_name'], $target_dir . "/" . $thumb3);
+        if ($_FILES['blue_pic']['name'] != "") {
+            $target_file = basename($_FILES['blue_pic']['name']);
+            $FileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+            $rand = rand(1, 1000000);
+            $thumb3 = 'thumb3' . $name_folder . 'r' . $rand . '.' . $FileType;
+            if ($FileType == 'jpg' or $FileType == 'png' or $FileType == 'jpeg') {
+                //$resize = resizeImage($_FILES['blue_pic']['tmp_name'], $target_dir . "/", $thumb3, '1024');
+                move_uploaded_file($_FILES['blue_pic']['tmp_name'], $target_dir . "/" . $thumb3);
+            } elseif ($FileType == 'pdf') {
+                redirect('../check-data-m4.php?action=error2');
+            }
+            // if ($numid == 0) {
+            $sql3 = "UPDATE `register` SET `evi_3` = '$thumb3' WHERE `u_id` = '$u_id' LIMIT 1;";
+            $query3 = mysqli_query($conn, $sql3);
+            // if ($query3) {
+            //     redirect('../check-data-m4.php?action=success3');
+            // } else {
+            //     redirect('../check-data-m4.php?action=error');
+            // }
+            // }
         }
 
         //4. เอกสารแสดงผลการเรียน 5 ภาคเรียน
-        // $sqlid = "select evi_4 from `register` where u_id='$_SESSION[id]' LIMIT 1";
+        // $sqlid = "select evi_4 from `register` where u_id='$u_id' LIMIT 1";
         // $resultid = mysqli_query($conn, $sqlid);
         // $fetid = mysqli_fetch_array($resultid);
-        $pattern = '';
-        for ($i = 0; $i < count($_FILES["grade_pic"]["name"]); $i++) {
-            $target_file = basename($_FILES['grade_pic']['name'][$i]);
-            $FileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-            $rand = rand(1, 1000000);
-            $thumb4 = 'thumb4' . $name_folder . 'r' . $rand . '.' . $FileType;
-            if ($FileType == 'jpg' or $FileType == 'png' or $FileType == 'jpeg') {
+        //print_r($_FILES['grade_pic']['name']);
+        //exit();
+        if ($_FILES['grade_pic']['name'][0] != "") {
+            //print_r($_FILES['grade_pic']['tmp_name']);
+            $pattern = '';
+            //echo "exit";
+            //exit();
+            for ($i = 0; $i < count($_FILES["grade_pic"]["name"]); $i++) {
+                $target_file = basename($_FILES['grade_pic']['name'][$i]);
+                $FileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+                $rand = rand(1, 1000000);
+                $thumb4 = 'thumb4' . $name_folder . 'r' . $rand . '.' . $FileType;
+                if ($FileType == 'jpg' or $FileType == 'png' or $FileType == 'jpeg') {
 
-                //$resize = resizeImage($_FILES['grade_pic']['tmp_name'][$i], $target_dir . "/", $thumb4, '1024');
-                move_uploaded_file($_FILES['grade_pic']['tmp_name'][$i], $target_dir . "/" . $thumb4);
-                $pattern .= $thumb4 . "#";
-            } elseif ($FileType == 'pdf') {
+                    //$resize = resizeImage($_FILES['grade_pic']['tmp_name'][$i], $target_dir . "/", $thumb4, '1024');
+                    move_uploaded_file($_FILES['grade_pic']['tmp_name'][$i], $target_dir . "/" . $thumb4);
+                    $pattern .= $thumb4 . "#";
+                } elseif ($FileType == 'pdf') {
 
-                move_uploaded_file($_FILES['grade_pic']['tmp_name'][$i], $target_dir . "/" . $thumb4);
+                    move_uploaded_file($_FILES['grade_pic']['tmp_name'][$i], $target_dir . "/" . $thumb4);
 
-                $pattern .= $thumb4 . "#";
+                    $pattern .= $thumb4 . "#";
+                }
             }
+            //echo $pattern;
+            //exit();
+            $sql4 = "UPDATE `register` SET `evi_4` = '$pattern' WHERE `u_id` = '$u_id' LIMIT 1;";
+            $query4 = mysqli_query($conn, $sql4);
+            // if ($query4) {
+            //     redirect('../check-data-m4.php?action=success3');
+            // } else {
+            //     redirect('../check-data-m4.php?action=error');
+            // }
         }
 
-        
-        if ($numid == 0) {
-            $sql = "UPDATE `register` SET `title` = '$title', `name` = '$name', `surname` = '$surname', `idperson` = '$idperson', `school` = '$school', `school_province` = '$school_province', `telephone` = '$telephone', `telephone2` = '$telephone2', `address` = '$address', `mu` = '$mu', `road` = '$road', `soi` = '$soi', `tumbon` = '$tumbon', `amphor` = '$amphor', `province` = '$province', `zipcode` = '$zipcode', `email` = '$email', `grade1` = '$grade1', `grade2` = '$grade2', `grade3` = '$grade3', `grade4` = '$grade4', `evi_1` = '$thumb1', `evi_2` = '$thumb2', `evi_3` = '$thumb3', `evi_4` = '$pattern' WHERE `register`.`id` = 1;";
-            $query = mysqli_query($conn, $sql);
-            if ($query) {
-                redirect('../manage-m4.php?action=success3');
-            } else {
-                redirect('../manage-m4.php?action=error');
-            }
+
+        //if ($numid == 0) {
+        $sql = "UPDATE `register` SET `title` = '$title', `name` = '$name', `surname` = '$surname', `idperson` = '$idperson', `school` = '$school', `school_province` = '$school_province', `telephone` = '$telephone', `telephone2` = '$telephone2', `address` = '$address', `mu` = '$mu', `road` = '$road', `soi` = '$soi', `tumbon` = '$tumbon', `amphor` = '$amphor', `province` = '$province', `zipcode` = '$zipcode', `email` = '$email', `grade1` = '$grade1', `grade2` = '$grade2', `grade3` = '$grade3', `grade4` = '$grade4' WHERE `u_id` = '$u_id' LIMIT 1;";
+        $query = mysqli_query($conn, $sql);
+        if ($query) {
+            redirect("../check-data-m4.php?action=success3&s_id=$u_id");
+        } else {
+            redirect("../check-data-m4.php?action=error&s_id=$u_id");
         }
+        //}
     } else {
-        redirect('../manage-m4.php?action=error');
+        redirect("../check-data-m4.php?action=error&s_id=$u_id");
     }
 }
-?>
+    

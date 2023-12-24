@@ -78,7 +78,7 @@ $fet_user = mysqli_fetch_array($result_user);
           <div class="container-fluid">
 
             <!-- Page Heading -->
-            <h1 class="h3 mb-2 text-gray-800">สมัครคัดเลือกเข้าเรียนโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ปีการศึกษา 2566</h1>
+            <h1 class="h3 mb-2 text-gray-800">สมัครคัดเลือกเข้าเรียนโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ปีการศึกษา 2567</h1>
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
@@ -111,7 +111,7 @@ $fet_user = mysqli_fetch_array($result_user);
                 } elseif ($action == 'error2') { ?>
                   <div class="alert alert-danger fade show">
                     <span class="close" data-dismiss="alert">×</span>
-                    <strong>มีข้อมูลการสมัครแล้ว ไม่สามารถสมัครใหม่ได้!!</strong>
+                    <strong>รูปถ่าย ใช้ไฟล์นามสกุล .jpeg .jpg เท่านั้น!</strong>
                   </div>
                 <?php
                 } elseif ($action == 'error3') { ?>
@@ -199,7 +199,7 @@ $fet_user = mysqli_fetch_array($result_user);
                     <tbody>
                       <tr>
                         <td width="20%">
-                          <span class="text-primary"><u style="font-size: 0.9rem; font-weight: bold;">วันที่สมัคร:</u> <?php echo convert_date_func($fetid_re['updated'], "digit", "datetime"); ?></span><br>
+                          <span class="text-primary"><u style="font-size: 0.9rem; font-weight: bold;">วันที่สมัคร:</u> <?php echo convert_date_func($fetid_re['datet'], "digit", "datetime"); ?></span><br>
                           <span class="text-primary"><u style="font-size: 0.9rem; font-weight: bold;">เลขประจำตัวสอบ:</u> <?php echo ($fetid_re['idregister'] === '0') ? "-" : $fetid_re['idregister']; ?></span><br>
                           <span style="color: green;"><u style="font-size: 0.9rem; font-weight: bold;">ข้อมูลส่วนตัว</u></span>
                           <p style="font-size: 0.9rem; padding-top:6px; margin:0;"><?php echo $fetid_re['title'] . $fetid_re['name'] . "&nbsp;&nbsp;&nbsp;&nbsp;" . $fetid_re['surname']; ?></p>
@@ -224,11 +224,11 @@ $fet_user = mysqli_fetch_array($result_user);
                         </td>
                         <td>
                           <span style="color: green;"><u style="font-weight: bold;">หลักฐานการสมัคร</u><br>
-                            <p style="color: green; font-size: 0.95rem;" class="mb-1">&#128181; <b>เปิดระบบ วันอังคารที่ 14 กุมภาพันธ์ 2566 เวลา 08.30 น.</b><br />
-                            <p style="color: red; font-size: 0.95rem;" class="mb-1">&#128181; <b>ปิดระบบ วันเสาร์ที่ 18 กุมภาพันธ์ 2566 เวลา 16.30 น.</b></p>
+                            <p style="color: green; font-size: 0.95rem;" class="mb-1">&#128181; <b>เปิดระบบ วันจันทร์ที่ 8 มกราคม 2567 เวลา 08.30 น.</b><br />
+                            <p style="color: red; font-size: 0.95rem;" class="mb-1">&#128181; <b>ปิดระบบ วันอาทิตย์ที่ 14 มกราคม 2567 เวลา 16.30 น.</b></p>
                             <table class="table table-bordered" width="100%" cellspacing="0">
                               <tr>
-                                <td>
+                                <td width="200">
                                   รูปถ่ายสีในรูปเครื่องแบบนักเรียน<br>
                                 </td>
                                 <td>
@@ -255,7 +255,8 @@ $fet_user = mysqli_fetch_array($result_user);
                                       <div class="embed-responsive" style="padding-bottom: 141.42%;">
                                         <object class="embed-responsive-item" data="upload/<?php echo $_SESSION['id']; ?>/<?php echo $fetid_re['evi_1']; ?>" type="application/pdf" internalinstanceid="9" title="">
                                         </object>
-                                    <?php }
+                                      </div>
+                                  <?php }
                                   } ?>
                                 </td>
                               </tr>
@@ -265,9 +266,21 @@ $fet_user = mysqli_fetch_array($result_user);
                                 </td>
                                 <td>
                                   <?php
-                                  if ($fetid_re['evi_2'] != "0") { ?>
-                                    <a href="upload/<?php echo $_SESSION['id']; ?>/<?php echo $fetid_re['evi_2']; ?>" target="_blank"><img class="img-fluid" src="upload/<?php echo $_SESSION['id']; ?>/<?php echo $fetid_re['evi_2']; ?>" alt=""></a>
-                                  <?php } ?>
+                                  if ($fetid_re['evi_2'] != "0") {
+
+                                    $FileType = strtolower(pathinfo($fetid_re['evi_2'], PATHINFO_EXTENSION));
+                                    //echo $FileType;
+                                    if ($FileType != "pdf") {
+                                  ?>
+                                      <a href="upload/<?php echo $_SESSION['id']; ?>/<?php echo $fetid_re['evi_2']; ?>" target="_blank"><img class="img-fluid" src="upload/<?php echo $_SESSION['id']; ?>/<?php echo $fetid_re['evi_2']; ?>" alt=""></a>
+                                    <?php } else { ?>
+                                      <div class="embed-responsive" style="padding-bottom: 141.42%;">
+                                        <object class="embed-responsive-item" data="upload/<?php echo $_SESSION['id']; ?>/<?php echo $fetid_re['evi_2']; ?>" type="application/pdf" internalinstanceid="9" title="">
+                                        </object>
+                                      </div>
+
+                                  <?php }
+                                  } ?>
                                 </td>
                               </tr>
                               <tr>
@@ -279,14 +292,25 @@ $fet_user = mysqli_fetch_array($result_user);
                                     <?php
                                     if ($fetid_re['evi_4'] != "0") {
                                       $f6 = explode("#", $fetid_re['evi_4']);
-                                      foreach ($f6 as $key => $row) {
+                                      //print_r($f6);
+                                      foreach ($f6 as $row) {
                                         if ($row) {
                                           $f6ck = explode(".", $row);
+                                          //echo $FileType;
+                                          //echo $row;
+                                          //exit();
+                                          if ($f6ck[1] != "pdf") {
                                     ?>
-                                          <li>
-                                            <a href="upload/<?php echo $_SESSION['id']; ?>/<?php echo $fetid_re['evi_4']; ?>" target="_blank"><img class="img-fluid" src="upload/<?php echo $_SESSION['id']; ?>/<?php echo $row; ?>" alt=""></a>
-                                          </li>
+                                            <li>
+                                              <a href="upload/<?php echo $_SESSION['id']; ?>/<?php echo $row; ?>" target="_blank"><img class="img-fluid" src="upload/<?php echo $_SESSION['id']; ?>/<?php echo $row; ?>" alt=""></a>
+                                            </li>
+                                          <?php } else { ?>
+                                            <div class="embed-responsive" style="margin: 10px 0; padding-bottom: 141.42%;">
+                                              <object class="embed-responsive-item" data="upload/<?php echo $_SESSION['id']; ?>/<?php echo $row; ?>" type="application/pdf" internalinstanceid="9" title="">
+                                              </object>
+                                            </div>
                                     <?php
+                                          }
                                         }
                                       }
                                     }
@@ -327,7 +351,7 @@ $fet_user = mysqli_fetch_array($result_user);
           <footer class="sticky-footer bg-white">
             <div class="container my-auto">
               <div class="copyright text-center my-auto">
-                <span>Copyright &copy; 2023 Yupparaj Wittayalai School</span>
+                <span>Copyright &copy; 2024 Yupparaj Wittayalai School</span>
               </div>
             </div>
           </footer>

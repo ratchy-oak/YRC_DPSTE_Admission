@@ -59,7 +59,7 @@ $resultid_re = mysqli_query($conn, $sqlid_re);
           <div class="container-fluid">
 
             <!-- Page Heading -->
-            <h1 class="h4 mb-2 text-gray-800">ตรวจสอบข้อมูลการสมัครคัดเลือกเข้าเรียนโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ปีการศึกษา 2566</h1>
+            <h1 class="h4 mb-2 text-gray-800">ตรวจสอบข้อมูลการสมัครคัดเลือกเข้าเรียนโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ปีการศึกษา 2567</h1>
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
@@ -119,7 +119,7 @@ $resultid_re = mysqli_query($conn, $sqlid_re);
                           <td><?php echo $fetid_re['telephone']; ?></td>
                           <td><?php echo $fetid_re['telephone2']; ?></td>
                           <td>
-                            <span class="text-primary"><?php echo convert_date_func($fetid_re['updated'], "digit"); ?></span>
+                            <span class="text-primary"><?php echo convert_date_func($fetid_re['datet'], "digit"); ?></span>
                           </td>
                           <td><a href="check-data-m4.php?s_id=<?php echo $fetid_re['u_id']; ?>" class="btn btn-warning btn-sm mt-1">ตรวจสอบข้อมูล</a></td>
                         </tr>
@@ -139,7 +139,7 @@ $resultid_re = mysqli_query($conn, $sqlid_re);
           <footer class="sticky-footer bg-white">
             <div class="container my-auto">
               <div class="copyright text-center my-auto">
-                <span>Copyright &copy; 2023 Yupparaj Wittayalai School</span>
+                <span>Copyright &copy; 2024 Yupparaj Wittayalai School</span>
               </div>
             </div>
           </footer>
