@@ -81,8 +81,8 @@
             <i class="fas fa-fw fa-file-alt"></i>
             <span>อัพโหลดหลักฐาน</span></a>
         </li>
-      <?php }
-      if ($numl == 1 && $fetl['s_check'] == '1') {
+      <?php } } } ?>
+      <!-- if ($numl == 1 && $fetl['s_check'] == '1') {
       ?>
         <li class="nav-item">
           <a class="nav-link" href="print4-66.php">
@@ -91,10 +91,7 @@
             </button>
           </a>
         </li>
-    <?php }
-    }
-  } ?>
-  <!-- <li class="nav-item">
+    <li class="nav-item">
     <a class="nav-link" href="https://drive.google.com/drive/folders/199YOH_ImRpmLa0Ly-tl-diF2EL2o61lq?usp=share_link" target="_blank">
       <button class="btn btn-danger" style="color: white;">
         <span>รายชื่อผู้มีสิทธิ์สอบ</span>

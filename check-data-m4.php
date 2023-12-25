@@ -132,16 +132,15 @@ $fetid_re = mysqli_fetch_array($resultid_re);
                     <tbody>
                       <tr>
                         <td width="20%">
-                          <?php if ($fetid_re['s_check'] == "1") { ?>
+                          <!-- <?php if ($fetid_re['s_check'] == "1") { ?>
                             <a class="nav-link" href="print4-66-admin.php?idstudent=<?php echo $fetid_re['idregister']; ?>">
                               <button class="btn btn-success" style="color: white;">
                                 <span>พิมพ์บัตรประจำตัวสอบ</span>
                               </button>
                             </a>
-                            <!-- <span class="btn btn-success btn-md">ยืนยันข้อมูลการสมัคร</span><br> -->
-                          <?php } ?>
+                          <?php } ?> -->
                           <span class="text-primary"><u style="font-size: 0.9rem; font-weight: bold;">วันที่สมัคร:</u> <?php echo convert_date_func($fetid_re['datet'], "digit", "datetime"); ?></span><br>
-                          <span class="text-primary"><u style="font-size: 0.9rem; font-weight: bold;">เลขประจำตัวสอบ:</u> <?php echo ($fetid_re['s_check'] == '0' && $fetid_re['idregister'] == '0') ? "-" : $fetid_re['idregister']; ?></span><br>
+                          <!-- <span class="text-primary"><u style="font-size: 0.9rem; font-weight: bold;">เลขประจำตัวสอบ:</u> <?php echo ($fetid_re['s_check'] == '0' && $fetid_re['idregister'] == '0') ? "-" : $fetid_re['idregister']; ?></span><br> -->
                           <span style="color: green;"><u style="font-size: 0.9rem; font-weight: bold;">ข้อมูลส่วนตัว</u></span>
                           <p style="font-size: 0.9rem; padding-top:6px; margin:0;"><?php echo $fetid_re['title'] . $fetid_re['name'] . "&nbsp;&nbsp;&nbsp;&nbsp;" . $fetid_re['surname']; ?></p>
                           <p style="font-size: 0.9rem; padding-top:6px; margin:0;">โรงเรียน: <?php echo $fetid_re['school']; ?></p>
@@ -156,6 +155,10 @@ $fetid_re = mysqli_fetch_array($resultid_re);
                           <p style="padding-top:6px; margin:0;">ผลการเรียนเฉลี่ยสะสมรายวิชาคณิตศาสตร์พื้นฐาน: <?php echo $fetid_re['grade2']; ?></p>
                           <p style="padding-top:6px; margin:0;">ผลการเรียนเฉลี่ยสะสมรายวิชาวิทยาศาสตร์พื้นฐาน: <?php echo $fetid_re['grade3']; ?></p>
                           <p style="padding-top:6px; margin:0;">ผลการเรียนเฉลี่ยสะสมรายวิชาภาษาอังกฤษพื้นฐาน: <?php echo $fetid_re['grade4']; ?></p>
+                          <br />
+                            <span style="color: green;"><u style="font-weight: bold;">ตามประกาศผลการสอบคัดเลือกนักเรียนเข้าโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ระดับมัธยมศึกษาตอนปลาย ประจำปีการศึกษา 2567 รอบที่ 1</u></span>
+                            <br>
+                            <p style="padding-top:6px; margin:0;">รายชื่อข้าพเจ้าอยู่ลำดับที่: <?php echo $fetid_re['sequence']; ?></p>
                           <br>
 
 
@@ -210,7 +213,7 @@ $fetid_re = mysqli_fetch_array($resultid_re);
                               </tr>
                               <tr>
                                 <td>
-                                  สำเนาบัตรประชาชน:<br>
+                                  สำเนาบัตรประชาชนพร้อมรับรองสำเนา:<br>
                                 </td>
                                 <td>
                                   <?php

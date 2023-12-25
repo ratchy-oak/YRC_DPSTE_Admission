@@ -212,6 +212,13 @@ $num_re = mysqli_num_rows($resultid_re);
                             <input name="grade4" class="form-control" type="text" value="<?php echo $fetid_re['grade4']; ?>" required>
                           </div>
                           <br />
+                          <div class="mb-3">
+                              <span style="color: red; font-weight: bold;">ตามประกาศผลการสอบคัดเลือกนักเรียนเข้าโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ระดับมัธยมศึกษาตอนปลาย ประจำปีการศึกษา 2567 รอบที่ 1</span><br>
+                              <label class="col-md-12 col-sm-12 col-form-label">รายชื่อข้าพเจ้าอยู่ลำดับที่ <span style="color: red; font-weight: bold;">*</span></label>
+                              <div class="col-md-3 col-sm-3">
+                                  <input name="sequence" class="form-control" type="text" value="<?php echo $fetid_re['sequence']; ?>" required>
+                              </div>
+                          </div>
                           <?php
                           if ($fetid_re['evi_1'] != "") { ?>
                             <label class="col-md-10 col-sm-10 col-form-label">รูปใบสมัครเดิม</label>
@@ -227,7 +234,7 @@ $num_re = mysqli_num_rows($resultid_re);
                             <label class="col-md-10 col-sm-10 col-form-label">สำเนาบัตรประชาชนเดิม</label>
                             <a href="upload/<?php echo $_SESSION['id']; ?>/<?php echo $fetid_re['evi_2']; ?>" class="btn btn-success" target="_blank"><?php echo $fetid_re['evi_2']; ?></a><br />
                           <?php } ?>
-                          <label class="col-md-12 col-sm-12 col-form-label"><strong>แนบสำเนาบัตรประชาชน <span style="color: red; font-weight: bold;">* ถ้าไม่เปลี่ยนแปลง ไม่ต้องอัพโหลดใหม่ ไฟล์รูปแบบ .pdf หรือ .jpeg หรือ .png</span></strong></label>
+                          <label class="col-md-12 col-sm-12 col-form-label"><strong>แนบสำเนาบัตรประชาชนพร้อมรับรองสำเนา <span style="color: red; font-weight: bold;">* ถ้าไม่เปลี่ยนแปลง ไม่ต้องอัพโหลดใหม่ ไฟล์รูปแบบ .pdf หรือ .jpeg หรือ .png</span></strong></label>
 
                           <div class="container">
                             <input type="file" name="id_card" accept="file_extension">

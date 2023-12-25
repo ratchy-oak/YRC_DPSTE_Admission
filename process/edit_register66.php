@@ -55,6 +55,9 @@ if (isset($_POST['edit_register'])) {
         $grade3 = $_POST['grade3'];
         $grade4 = $_POST['grade4'];
         //echo "checkOK";
+
+        $sequence = $_POST['sequence'];
+
         //1.แนบใบสมัคร
         if ($_FILES['application_paper']['name'] != "") {
             $target_file = basename($_FILES['application_paper']['name']);
@@ -166,7 +169,7 @@ if (isset($_POST['edit_register'])) {
 
 
         //if ($numid == 0) {
-        $sql = "UPDATE `register` SET `title` = '$title', `name` = '$name', `surname` = '$surname', `idperson` = '$idperson', `school` = '$school', `school_province` = '$school_province', `telephone` = '$telephone', `telephone2` = '$telephone2', `address` = '$address', `mu` = '$mu', `road` = '$road', `soi` = '$soi', `tumbon` = '$tumbon', `amphor` = '$amphor', `province` = '$province', `zipcode` = '$zipcode', `email` = '$email', `grade1` = '$grade1', `grade2` = '$grade2', `grade3` = '$grade3', `grade4` = '$grade4' WHERE `u_id` = '$_SESSION[id]' LIMIT 1;";
+        $sql = "UPDATE `register` SET `title` = '$title', `name` = '$name', `surname` = '$surname', `idperson` = '$idperson', `school` = '$school', `school_province` = '$school_province', `telephone` = '$telephone', `telephone2` = '$telephone2', `address` = '$address', `mu` = '$mu', `road` = '$road', `soi` = '$soi', `tumbon` = '$tumbon', `amphor` = '$amphor', `province` = '$province', `zipcode` = '$zipcode', `email` = '$email', `grade1` = '$grade1', `grade2` = '$grade2', `grade3` = '$grade3', `grade4` = '$grade4', `sequence` = '$sequence' WHERE `u_id` = '$_SESSION[id]' LIMIT 1;";
         $query = mysqli_query($conn, $sql);
         if ($query) {
             redirect('../register66.php?action=success3');

@@ -42,12 +42,12 @@ if (isset($_SESSION['loggedin'])) {
                   <div class="text-center">
                     <img src="img/dpstelogo.png" style="width: 100%" class="mb-3">
                     <h1 class="h4 text-pink-900">
-                      <b>ระบบพิมพ์บัตรประจำตัวสอบ<br />ชั้น ม.4 ประจำปีการศึกษา 2567<br />โครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ)<br />
+                      <b>ระบบรับสมัครคัดเลือก<br />ชั้น ม.4 ประจำปีการศึกษา 2567<br />โครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ)<br />
                         ศูนย์โรงเรียนยุพราชวิทยาลัย
                       </b>
                     </h1>
-                    <p style="color: green; font-size: 0.95rem;" class="mb-1">&#128181; <b>เปิดระบบ วันจันทร์ที่ 8 มกราคม 2567 เวลา 08.30 น.</b><br />
-                    <p style="color: red; font-size: 0.95rem;" class="mb-1">&#128181; <b>ปิดระบบ วันอาทิตย์ที่ 14 มกราคม 2567 เวลา 16.30 น.</b></p>
+                    <p style="color: green; font-size: 0.95rem;" class="mb-1">&#128181; <b>เปิดระบบ วันจันทร์ที่ 8 มกราคม พ.ศ. 2567 เวลา 08.30 น.</b><br />
+                    <p style="color: red; font-size: 0.95rem;" class="mb-1">&#128181; <b>ปิดระบบ วันอาทิตย์ที่ 14 มกราคม พ.ศ. 2567 เวลา 16.30 น.</b></p>
                     <br>
                     <a href="https://www.facebook.com/DPST.DPSTE.YRC" target="_blank" style="color: blue; font-size: 1rem;"><b>&#128073; เพจโครงการพสวท. และ พสวท. สู่ความเป็นเลิศ <br>ศูนย์โรงเรียนยุพราชวิทยาลัย</b></a>
                     <p class="mt-4"><b>เข้าสู่ระบบ</b></p>

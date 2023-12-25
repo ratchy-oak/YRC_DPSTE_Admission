@@ -55,6 +55,9 @@ if (isset($_POST['approve_application'])) {
         $grade3 = $_POST['grade3'];
         $grade4 = $_POST['grade4'];
         //echo "checkOK";
+
+        $sequence = $_POST['sequence'];
+
         //1.แนบใบสมัคร
         $target_file = basename($_FILES['application_paper']['name']);
         $FileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -116,7 +119,7 @@ if (isset($_POST['approve_application'])) {
         }
 
         if ($numid == 0) {
-            $sql = "INSERT INTO `register` (`id`, `u_id`, `idregister`, `title`, `name`, `surname`, `idperson`, `school`, `school_province`, `telephone`, `telephone2`, `address`, `mu`, `road`, `soi`, `tumbon`, `amphor`, `province`,`zipcode`,`email`, `grade1`, `grade2`, `grade3`, `grade4`, `evi_1`, `evi_2`, `evi_3`, `evi_4`, `s_check`, `datet`, `updated`) VALUES (NULL, '$name_folder', '0', '$title', '$name', '$surname', '$idperson', '$school', '$school_province', '$telephone', '$telephone2', '$address', '$mu', '$road', '$soi', '$tumbon', '$amphor', '$province','$zipcode', '$email', '$grade1', '$grade2', '$grade3', '$grade4', '$thumb1', '$thumb2', '$thumb3', '$pattern', '0', current_timestamp(), '0000-00-00 00:00:00');";
+            $sql = "INSERT INTO `register` (`id`, `u_id`, `idregister`, `title`, `name`, `surname`, `idperson`, `school`, `school_province`, `telephone`, `telephone2`, `address`, `mu`, `road`, `soi`, `tumbon`, `amphor`, `province`,`zipcode`,`email`, `grade1`, `grade2`, `grade3`, `grade4`, `sequence`, `evi_1`, `evi_2`, `evi_3`, `evi_4`, `s_check`, `datet`, `updated`) VALUES (NULL, '$name_folder', '0', '$title', '$name', '$surname', '$idperson', '$school', '$school_province', '$telephone', '$telephone2', '$address', '$mu', '$road', '$soi', '$tumbon', '$amphor', '$province','$zipcode', '$email', '$grade1', '$grade2', '$grade3', '$grade4', '$sequence', '$thumb1', '$thumb2', '$thumb3', '$pattern', '0', current_timestamp(), '0000-00-00 00:00:00');";
             $query = mysqli_query($conn, $sql);
             if ($query) {
                 redirect('../register66.php?action=uploadSuccess');
