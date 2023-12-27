@@ -19,16 +19,15 @@ header('Content-Disposition: attachment; filename="m4-yrc.xls"'); # ชื่อ
   <TABLE x:str BORDER="1">
     <TR>
       <th>ที่</th>
-      <th>เลขประจำตัว</th>
       <th>เลขประจำตัวประชาชน</th>
       <th>คำนำหน้า</th>
       <th>ชื่อ</th>
       <th>นามสกุล</th>
       <th>โรงเรียน</th>
-      <th>ผลการเรียนเฉลี่ยรวมทุกรายวิชา</th>
-      <th>ผลการเรียนเฉลี่ยวิชาคณิตศาสตร์พื้นฐาน</th>
-      <th>ผลการเรียนเฉลี่ยวิชาวิทยาศาสตร์และเทคโนโลยีพื้นฐาน</th>
-      <th>ผลการเรียนเฉลี่ยวิชาอังกฤษพื้นฐาน</th>
+      <th>ผลการเรียนสะสมทุกรายวิชา (5 ภาคเรียน)</th>
+      <th>ผลการเรียนสะสมรายวิชาพื้นฐานทุกรายวิชาของกลุ่มสาระการเรียนรู้คณิตศาสตร์ (5 ภาคเรียน)</th>
+      <th>ผลการเรียนสะสมรายวิชาพื้นฐานทุกรายวิชาของกลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยีพื้นฐาน (5 ภาคเรียน)</th>
+      <th>ผลการเรียนสะสมรายวิชาพื้นฐานทุกรายวิชาของกลุ่มสาระการเรียนรู้ภาษาต่างประเทศ (5 ภาคเรียน)</th>
       <th>ลำดับที่ตามประกาศ</th>
       <th>เบอร์โทร</th>
       <th>ที่อยู่</th>
@@ -38,7 +37,7 @@ header('Content-Disposition: attachment; filename="m4-yrc.xls"'); # ชื่อ
       <th>email</th>
       <th>สถานะตรวจหลักฐานปกติ</th>
       <th>comment</th>
-      <th>วันที่สมัคร</th>
+      <th>วันที่ยืนยัน</th>
     </TR>
     <TR>
       <?php
@@ -53,7 +52,6 @@ header('Content-Disposition: attachment; filename="m4-yrc.xls"'); # ชื่อ
         $date_digit = convert_date_func($fet1['updated'], "digit", "datetime");
       ?>
         <TD align="center"><?php echo $i; ?></TD>
-        <TD align="center"><?php echo $fet1['idregister']; ?></TD>
         <TD align="center"><?php echo $fet2['u_user']; ?></TD>
         <TD align="center"><?php echo $fet1['title']; ?></TD>
         <TD align="center"><?php echo $fet1['name']; ?></TD>
@@ -63,6 +61,7 @@ header('Content-Disposition: attachment; filename="m4-yrc.xls"'); # ชื่อ
         <TD align="center"><?php echo $fet1['grade2']; ?></TD>
         <TD align="center"><?php echo $fet1['grade3']; ?></TD>
         <TD align="center"><?php echo $fet1['grade4']; ?></TD>
+        <TD align="center"><?php echo $fet1['sequence']; ?></TD>
         <TD align="center"><?php echo $fet1['telephone']; ?></TD>
         <TD align="center"><?php echo "บ้านเลขที่ " . $fet1['address'] . "  หมู่ที่ " . $fet1['mu'] . "   ตำบล " . $fet1['tumbon']; ?></TD>
         <TD align="center"><?php echo $fet1['amphor']; ?></TD>

@@ -211,10 +211,10 @@ $fet_user = mysqli_fetch_array($result_user);
                             <br />
                             <span style="color: green;"><u style="font-weight: bold;">ผลการเรียนเฉลี่ยสะสม 5 ภาคเรียน<br />(ชั้น ม.1 ม.2 และ ม.3 ภาคเรียนที่ 1)</u></span>
                             <br>
-                          <p style="padding-top:6px; margin:0;">ผลการเรียนเฉลี่ยสะสมทุกรายวิชา: <?php echo $fetid_re['grade1']; ?></p>
-                          <p style="padding-top:6px; margin:0;">ผลการเรียนเฉลี่ยสะสมรายวิชาคณิตศาสตร์พื้นฐาน: <?php echo $fetid_re['grade2']; ?></p>
-                          <p style="padding-top:6px; margin:0;">ผลการเรียนเฉลี่ยสะสมรายวิชาวิทยาศาสตร์และเทคโนโลยีพื้นฐาน: <?php echo $fetid_re['grade3']; ?></p>
-                          <p style="padding-top:6px; margin:0;">ผลการเรียนเฉลี่ยสะสมรายวิชาภาษาอังกฤษพื้นฐาน: <?php echo $fetid_re['grade4']; ?></p>
+                          <p style="padding-top:6px; margin:0;">ผลการเรียนสะสมทุกรายวิชา: <?php echo $fetid_re['grade1']; ?></p>
+                          <p style="padding-top:6px; margin:0;">ผลการเรียนสะสมรายวิชาพื้นฐานทุกรายวิชาของกลุ่มสาระการเรียนรู้คณิตศาสตร์: <?php echo $fetid_re['grade2']; ?></p>
+                          <p style="padding-top:6px; margin:0;">ผลการเรียนสะสมรายวิชาพื้นฐานทุกรายวิชาของกลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยีพื้นฐาน: <?php echo $fetid_re['grade3']; ?></p>
+                          <p style="padding-top:6px; margin:0;">ผลการเรียนสะสมรายวิชาพื้นฐานทุกรายวิชาของกลุ่มสาระการเรียนรู้ภาษาต่างประเทศ (ภาษาอังกฤษ): <?php echo $fetid_re['grade4']; ?></p>
                           <br />
                             <span style="color: green;"><u style="font-weight: bold;">ตามประกาศผลการสอบคัดเลือกนักเรียนเข้าโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ระดับมัธยมศึกษาตอนปลาย ประจำปีการศึกษา 2567 รอบที่ 1</u></span>
                             <br>

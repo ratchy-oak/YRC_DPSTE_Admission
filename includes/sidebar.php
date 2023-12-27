@@ -72,8 +72,8 @@
       if ($numl == 0) {
     ?>
      <li class="nav-item">
-          <!-- <a class="nav-link" href="application-form.php"> -->
-          <a class="nav-link" href="pleasewait.php">
+          <a class="nav-link" href="application-form.php">
+          <!-- <a class="nav-link" href="pleasewait.php"> -->
             <button class="btn" style="background-color: #F13596;color: white;">
               <span>เข้าสู่ระบบรับสมัคร</span>
             </button>
