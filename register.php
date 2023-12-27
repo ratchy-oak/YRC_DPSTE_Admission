@@ -80,7 +80,7 @@ $fet_se = mysqli_fetch_array($result_se);
                 <form action="process/add_users.php" method="POST">
                   <p style="color: red;">* username ใช้ เลขประจำตัวประชาชน</p>
                   <div class="form-group">
-                    <input type="text" class="form-control form-control-user" id="InputUser" name="username" placeholder="เลขประจำตัวประชาชน" required />
+                    <input type="tel" pattern="[0-9]{13}" class="form-control form-control-user" id="InputUser" name="username" placeholder="เลขประจำตัวประชาชน" required />
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-6 mb-3 mb-sm-0">

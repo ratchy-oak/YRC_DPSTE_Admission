@@ -90,7 +90,7 @@ if (isset($_SESSION['loggedin'])) {
                   </div> -->
                   <form action="process/p_login.php" method="POST">
                     <div class="form-group">
-                      <input type="text" class="form-control form-control-user" id="InputUser" name="username" placeholder="เลขประจำตัวประชาชน" required />
+                      <input type="tel" class="form-control form-control-user" id="InputUser" name="username" placeholder="เลขประจำตัวประชาชน" required />
                     </div>
                     <div class="form-group">
                       <input type="password" class="form-control form-control-user" id="InputPassword" name="pass" placeholder="รหัสผ่าน" required />
