@@ -44,7 +44,7 @@
       เมนู
     </div>
     <li class="nav-item">
-      <a target="_blnak" class="nav-link" href="">
+      <a target="_blnak" class="nav-link" href="https://drive.google.com/file/d/1ryVwGIAbdQcQ_mmFb3Dd232h0YjbyjTn/view?usp=sharing">
         <i class="fas fa-fw fa-file-alt"></i>
         <span>ประกาศรับสมัคร</span></a>
     </li>
@@ -72,8 +72,8 @@
       if ($numl == 0) {
     ?>
      <li class="nav-item">
-          <!-- <a class="nav-link" href="application-form.php"> -->
-          <a class="nav-link" href="pleasewait.php">
+          <a class="nav-link" href="application-form.php">
+          <!-- <a class="nav-link" href="pleasewait.php"> -->
             <button class="btn" style="background-color: #F13596;color: white;">
               <span>เข้าสู่ระบบรับสมัคร</span>
             </button>

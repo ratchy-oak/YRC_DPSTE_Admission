@@ -214,24 +214,24 @@ $fet_user = mysqli_fetch_array($result_user);
                                         <div class="col-xl-6">
                                             <div class="form-group">
                                                 <span style="color: red; font-weight: bold;">ผลการเรียนเฉลี่ยสะสม 5 ภาคเรียน (ชั้น ม.1 ม.2 และ ม.3 ภาคเรียนที่ 1)</span><br>
-                                                <label class="col-md-12 col-sm-12 col-form-label">ผลการเรียนสะสมทุกรายวิชา (5 ภาคเรียน) <span style="color: red; font-weight: bold;">*</span></label>
+                                                <label class="col-md-12 col-sm-12 col-form-label">ผลการเรียนเฉลี่ยสะสมทุกรายวิชา (5 ภาคเรียน) <span style="color: red; font-weight: bold;">*</span></label>
                                                 <div class="col-md-3 col-sm-3">
                                                     <input name="grade1" class="form-control" type="text" required>
                                                 </div>
-                                                <label class="col-md-12 col-sm-12 col-form-label">ผลการเรียนสะสมรายวิชาพื้นฐานทุกรายวิชาของกลุ่มสาระการเรียนรู้คณิตศาสตร์ (5 ภาคเรียน) <span style="color: red; font-weight: bold;">*</span></label>
+                                                <label class="col-md-12 col-sm-12 col-form-label">ผลการเรียนเฉลี่ยสะสมรายวิชาพื้นฐานทุกรายวิชาของกลุ่มสาระการเรียนรู้คณิตศาสตร์ (5 ภาคเรียน) <span style="color: red; font-weight: bold;">*</span></label>
                                                 <div class="col-md-3 col-sm-3">
                                                     <input name="grade2" class="form-control" type="text" required>
                                                 </div>
-                                                <label class="col-md-12 col-sm-12 col-form-label">ผลการเรียนสะสมรายวิชาพื้นฐานทุกรายวิชาของกลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยีพื้นฐาน (5 ภาคเรียน) <span style="color: red; font-weight: bold;">*</span></label>
+                                                <label class="col-md-12 col-sm-12 col-form-label">ผลการเรียนเฉลี่ยสะสมรายวิชาพื้นฐานทุกรายวิชาของกลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยี (5 ภาคเรียน) <span style="color: red; font-weight: bold;">*</span></label>
                                                 <div class="col-md-3 col-sm-3">
                                                     <input name="grade3" class="form-control" type="text" required>
                                                 </div>
-                                                <label class="col-md-12 col-sm-12 col-form-label">ผลการเรียนสะสมรายวิชาพื้นฐานทุกรายวิชาของกลุ่มสาระการเรียนรู้ภาษาต่างประเทศ (ภาษาอังกฤษ) (5 ภาคเรียน) <span style="color: red; font-weight: bold;">*</span></label>
+                                                <label class="col-md-12 col-sm-12 col-form-label">ผลการเรียนเฉลี่ยสะสมรายวิชาพื้นฐานทุกรายวิชาของกลุ่มสาระการเรียนรู้<br/>ภาษาต่างประเทศ (ภาษาอังกฤษ) (5 ภาคเรียน) <span style="color: red; font-weight: bold;">*</span></label>
                                                 <div class="col-md-3 col-sm-3">
                                                     <input name="grade4" class="form-control" type="text" required>
                                                 </div>
                                                 <div class="mt-3">
-                                                    <span style="color: red; font-weight: bold;">ตามประกาศผลการสอบคัดเลือกนักเรียนเข้าโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ระดับมัธยมศึกษาตอนปลาย ประจำปีการศึกษา 2567 รอบที่ 1</span><br>
+                                                    <span style="color: red; font-weight: bold;">ตามประกาศผลการสอบคัดเลือกนักเรียนเข้าโครงการห้องเรียน พสวท.<br/>(สู่ความเป็นเลิศ) ระดับมัธยมศึกษาตอนปลาย ประจำปีการศึกษา 2567 รอบที่ 1</span><br>
                                                     <label class="col-md-12 col-sm-12 col-form-label">รายชื่อข้าพเจ้าอยู่ลำดับที่ <span style="color: red; font-weight: bold;">*</span></label>
                                                     <div class="col-md-3 col-sm-3">
                                                         <input name="sequence" class="form-control" type="text" required>

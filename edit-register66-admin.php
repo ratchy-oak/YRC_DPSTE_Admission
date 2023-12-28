@@ -196,19 +196,19 @@ $num_re = mysqli_num_rows($resultid_re);
                       <div class="col-xl-6">
                         <div class="form-group">
                           <span style="color: red; font-weight: bold;">ผลการเรียนเฉลี่ยสะสม 5 ภาคเรียน (ชั้น ม.1 ม.2 และ ม.3 ภาคเรียนที่ 1)</span><br>
-                          <label class="col-md-12 col-sm-12 col-form-label">ผลการเรียนสะสมทุกรายวิชา (5 ภาคเรียน) <span style="color: red; font-weight: bold;">*</span></label>
+                          <label class="col-md-12 col-sm-12 col-form-label">ผลการเรียนเฉลี่ยสะสมทุกรายวิชา (5 ภาคเรียน) <span style="color: red; font-weight: bold;">*</span></label>
                           <div class="col-md-3 col-sm-3">
                             <input name="grade1" class="form-control" type="text" value="<?php echo $fetid_re['grade1']; ?>" required>
                           </div>
-                          <label class="col-md-12 col-sm-12 col-form-label">ผลการเรียนสะสมรายวิชาพื้นฐานทุกรายวิชาของกลุ่มสาระการเรียนรู้คณิตศาสตร์ (5 ภาคเรียน) <span style="color: red; font-weight: bold;">*</span></label>
+                          <label class="col-md-12 col-sm-12 col-form-label">ผลการเรียนเฉลี่ยสะสมรายวิชาพื้นฐานทุกรายวิชาของกลุ่มสาระการเรียนรู้คณิตศาสตร์ (5 ภาคเรียน) <span style="color: red; font-weight: bold;">*</span></label>
                           <div class="col-md-3 col-sm-3">
                             <input name="grade2" class="form-control" type="text" value="<?php echo $fetid_re['grade2']; ?>" required>
                           </div>
-                          <label class="col-md-12 col-sm-12 col-form-label">ผลการเรียนสะสมรายวิชาพื้นฐานทุกรายวิชาของกลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยีพื้นฐาน (5 ภาคเรียน) <span style="color: red; font-weight: bold;">*</span></label>
+                          <label class="col-md-12 col-sm-12 col-form-label">ผลการเรียนเฉลี่ยสะสมรายวิชาพื้นฐานทุกรายวิชาของกลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยี (5 ภาคเรียน) <span style="color: red; font-weight: bold;">*</span></label>
                           <div class="col-md-3 col-sm-3">
                             <input name="grade3" class="form-control" type="text" value="<?php echo $fetid_re['grade3']; ?>" required>
                           </div>
-                          <label class="col-md-12 col-sm-12 col-form-label">ผลการเรียนสะสมรายวิชาพื้นฐานทุกรายวิชาของกลุ่มสาระการเรียนรู้ภาษาต่างประเทศ (ภาษาอังกฤษ) (5 ภาคเรียน) <span style="color: red; font-weight: bold;">*</span></label>
+                          <label class="col-md-12 col-sm-12 col-form-label">ผลการเรียนเฉลี่ยสะสมรายวิชาพื้นฐานทุกรายวิชาของกลุ่มสาระการเรียนรู้ภาษาต่างประเทศ (ภาษาอังกฤษ) (5 ภาคเรียน) <span style="color: red; font-weight: bold;">*</span></label>
                           <div class="col-md-3 col-sm-3">
                             <input name="grade4" class="form-control" type="text" value="<?php echo $fetid_re['grade4']; ?>" required>
                           </div>
