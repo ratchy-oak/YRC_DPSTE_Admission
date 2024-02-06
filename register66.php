@@ -78,7 +78,7 @@ $fet_user = mysqli_fetch_array($result_user);
           <div class="container-fluid">
 
             <!-- Page Heading -->
-            <h1 class="h3 mb-2 text-gray-800">สมัครคัดเลือกเข้าเรียนโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ปีการศึกษา 2567</h1>
+            <h1 class="h3 mb-2 text-gray-800">สมัครคัดเลือกเข้าเรียนโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ปีการศึกษา 2567 (รอบที่ 2)</h1>
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
@@ -228,8 +228,8 @@ $fet_user = mysqli_fetch_array($result_user);
                         </td>
                         <td>
                           <span style="color: green;"><u style="font-weight: bold;">หลักฐานการสมัคร</u><br>
-                            <p style="color: green; font-size: 0.95rem;" class="mb-1">&#128181; <b>เปิดระบบ วันจันทร์ที่ 8 มกราคม พ.ศ. 2567 เวลา 08.30 น.</b><br />
-                            <p style="color: red; font-size: 0.95rem;" class="mb-1">&#128181; <b>ปิดระบบ วันอาทิตย์ที่ 14 มกราคม พ.ศ. 2567 เวลา 16.30 น.</b></p>
+                            <p style="color: green; font-size: 0.95rem;" class="mb-1">&#128181; <b>เปิดระบบ วันพุธที่ 7 กุมภาพันธ์ พ.ศ. 2567 เวลา 08.30 น.</b><br />
+                            <p style="color: red; font-size: 0.95rem;" class="mb-1">&#128181; <b>ปิดระบบ วันอาทิตย์ที่ 11 กุมภาพันธ์ พ.ศ. 2567 เวลา 16.30 น.</b></p>
                             <table class="table table-bordered" width="100%" cellspacing="0">
                               <tr>
                                 <td width="200">

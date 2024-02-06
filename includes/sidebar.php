@@ -2,7 +2,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
   <!-- Sidebar - Brand -->
   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-    <div class="sidebar-brand-text mt-5">ระบบรับสมัครนักเรียน<br>โครงการห้องเรียน พสวท.(สู่ความเป็นเลิศ)<br>
+    <div class="sidebar-brand-text mt-5">ระบบรับสมัครนักเรียน<br>โครงการห้องเรียน พสวท.(สู่ความเป็นเลิศ)<br><b style="color: lightgreen">(รอบที่ 2)</b>
       <p style="color: yellow">ปีการศึกษา 2567</p>
     </div>
   </a>
@@ -44,22 +44,17 @@
       เมนู
     </div>
     <li class="nav-item">
-      <a target="_blnak" class="nav-link" href="https://drive.google.com/file/d/1ryVwGIAbdQcQ_mmFb3Dd232h0YjbyjTn/view?usp=sharing">
+      <a target="_blnak" class="nav-link" href="https://drive.google.com/file/d/1oMtzg4isOw-yfxE0cZyIiVSJtiShvDNM/view?usp=sharing">
         <i class="fas fa-fw fa-file-alt"></i>
         <span>ประกาศรับสมัคร</span></a>
     </li>
     <li class="nav-item">
-      <a target="_blnak" class="nav-link" href="https://drive.google.com/file/d/1AkeShgMCLc4JjtoeUb5LW_KazWDl9smX/view?usp=sharing">
+      <a target="_blnak" class="nav-link" href="https://drive.google.com/file/d/1bJtdIG63KpIFDMjlXd-vhzikAApHnX7V/view?usp=sharing">
         <i class="fas fa-fw fa-file-alt"></i>
         <span>ดาวน์โหลดใบสมัคร</span></a>
     </li>
     <li class="nav-item">
-      <a target="_blnak" class="nav-link" href="http://dpst.ipst.ac.th/index.php/news/dpst_news/342-%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A8%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%AD%E0%B8%9A%E0%B8%84%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%81%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99-%E0%B8%9E%E0%B8%AA%E0%B8%A7%E0%B8%97-%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%A5%E0%B8%B4%E0%B8%A8-%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B8%A1%E0%B8%B1%E0%B8%98%E0%B8%A2%E0%B8%A1%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B8%95%E0%B8%AD%E0%B8%99%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B8%A2-%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%88%E0%B8%B3%E0%B8%9B%E0%B8%B5%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2-2567-%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B8%97%E0%B8%B5%E0%B9%88-1">
-        <i class="fas fa-fw fa-file-alt"></i>
-        <span>ประกาศจาก สสวท.</span></a>
-    </li>
-    <li class="nav-item">
-      <a target="_blnak" class="nav-link" href="https://drive.google.com/file/d/1vci_nLQUV4CAL7hP4Vja2TKk7IkSd8RI/view?usp=sharing">
+      <a target="_blnak" class="nav-link" href="https://drive.google.com/file/d/1OiKWDgVCV1i4X5zyHzFQ1IRdCmR6IrEy/view?usp=sharing">
         <i class="fas fa-fw fa-file-alt"></i>
         <span>ตรวจสอบรายชื่อผู้มีสิทธิ์สมัครคัดเลือก</span></a>
     </li>
@@ -72,8 +67,8 @@
       if ($numl == 0) {
     ?>
      <li class="nav-item">
-          <!-- <a class="nav-link" href="application-form.php"> -->
-          <a class="nav-link" href="pleasewait.php">
+          <a class="nav-link" href="application-form.php">
+          <!-- <a class="nav-link" href="pleasewait.php"> -->
             <button class="btn" style="background-color: #F13596;color: white;">
               <span>เข้าสู่ระบบรับสมัคร</span>
             </button>

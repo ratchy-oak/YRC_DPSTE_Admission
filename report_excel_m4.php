@@ -19,6 +19,7 @@ header('Content-Disposition: attachment; filename="m4-yrc.xls"'); # ชื่อ
   <TABLE x:str BORDER="1">
     <TR>
       <th>ที่</th>
+      <th>เลขประจำตัวสมัคร</th>
       <th>เลขประจำตัวประชาชน</th>
       <th>คำนำหน้า</th>
       <th>ชื่อ</th>
@@ -53,6 +54,7 @@ header('Content-Disposition: attachment; filename="m4-yrc.xls"'); # ชื่อ
         $date_digit = convert_date_func($fet1['updated'], "digit", "datetime");
       ?>
         <TD align="center"><?php echo $i; ?></TD>
+        <TD align="center"><?php echo $fet1['idregister']; ?></TD>
         <TD align="center"><?php echo $fet2['u_user']; ?></TD>
         <TD align="center"><?php echo $fet1['title']; ?></TD>
         <TD align="center"><?php echo $fet1['name']; ?></TD>

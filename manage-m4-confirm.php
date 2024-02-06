@@ -59,7 +59,7 @@ $resultid_re = mysqli_query($conn, $sqlid_re);
           <div class="container-fluid">
 
             <!-- Page Heading -->
-            <h1 class="h4 mb-2 text-gray-800">ข้อมูลการสมัครคัดเลือกเข้าเรียนโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ปีการศึกษา 2567 (ยืนยันข้อมูล)</h1>
+            <h1 class="h4 mb-2 text-gray-800">ข้อมูลการสมัครคัดเลือกเข้าเรียนโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ปีการศึกษา 2567 (รอบที่ 2) (ยืนยันข้อมูล)</h1>
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
