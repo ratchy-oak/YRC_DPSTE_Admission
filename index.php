@@ -69,7 +69,7 @@ $fet2 = mysqli_fetch_array($query2);
                 <div class=" card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters">
-                    <img src="img/421958071_1164054468312873_7453425054056331475_n.png" style="max-width: 100%;">
+                    <img src="img/423735540_763138821962416_4120469889645052521_n.jpg" style="max-width: 100%;">
                   </div>
                 </div>
               </div>
