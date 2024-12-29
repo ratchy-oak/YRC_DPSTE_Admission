@@ -3,7 +3,7 @@ session_start();
 //Server detail
 $db_user = "root";
 $db_password = "";
-$db_name = "yrc_dpste67";
+$db_name = "yrc_dpste68";
 $server_name = "localhost";
 $db_char_code = "utf8";
 $db_collation = "utf8_general_ci";

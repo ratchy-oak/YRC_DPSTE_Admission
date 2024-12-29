@@ -65,7 +65,7 @@ $fetid_re = mysqli_fetch_array($resultid_re);
           <div class="container-fluid">
 
             <!-- Page Heading -->
-            <h1 class="h3 mb-2 text-gray-800">ข้อมูลการสมัครคัดเลือกเข้าเรียนโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ปีการศึกษา 2567 (รอบที่ 2)<br />ของ <?php echo $fetid_re['title'] . $fetid_re['name'] . "&nbsp;&nbsp;&nbsp;" . $fetid_re['surname']; ?></h1>
+            <h1 class="h3 mb-2 text-gray-800">ข้อมูลการสมัครคัดเลือกเข้าเรียนโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ปีการศึกษา 2568<br />ของ <?php echo $fetid_re['title'] . $fetid_re['name'] . "&nbsp;&nbsp;&nbsp;" . $fetid_re['surname']; ?></h1>
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
               <div class="card-header py-3">
@@ -156,7 +156,7 @@ $fetid_re = mysqli_fetch_array($resultid_re);
                           <p style="padding-top:6px; margin:0;">ผลการเรียนเฉลี่ยสะสมรายวิชาพื้นฐานทุกรายวิชาของกลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยี: <?php echo $fetid_re['grade3']; ?></p>
                           <p style="padding-top:6px; margin:0;">ผลการเรียนเฉลี่ยสะสมรายวิชาพื้นฐานทุกรายวิชาของกลุ่มสาระการเรียนรู้ภาษาต่างประเทศ (ภาษาอังกฤษ): <?php echo $fetid_re['grade4']; ?></p>
                           <br />
-                            <span style="color: green;"><u style="font-weight: bold;">ตามประกาศผลการสอบคัดเลือกนักเรียนเข้าโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ระดับมัธยมศึกษาตอนปลาย ประจำปีการศึกษา 2567 รอบที่ 1</u></span>
+                            <span style="color: green;"><u style="font-weight: bold;">ตามประกาศผลการสอบคัดเลือกนักเรียนเข้าโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ระดับมัธยมศึกษาตอนปลาย ประจำปีการศึกษา 2568 รอบที่ 1</u></span>
                             <br>
                             <p style="padding-top:6px; margin:0;">รายชื่อข้าพเจ้าอยู่ลำดับที่: <?php echo $fetid_re['sequence']; ?></p>
                           <br>
@@ -176,8 +176,8 @@ $fetid_re = mysqli_fetch_array($resultid_re);
                         </td>
                         <td>
                           <span style="color: green;"><u style="font-weight: bold;">หลักฐานการสมัคร</u><br>
-                            <p style="color: green; font-size: 0.95rem;" class="mb-1">&#128181; <b>เปิดระบบ วันพุธที่ 7 กุมภาพันธ์ พ.ศ. 2567 เวลา 08.30 น.</b><br />
-                            <p style="color: red; font-size: 0.95rem;" class="mb-1">&#128181; <b>ปิดระบบ วันอาทิตย์ที่ 11 กุมภาพันธ์ พ.ศ. 2567 เวลา 16.30 น.</b></p>
+                            <p style="color: green; font-size: 0.95rem;" class="mb-1">&#128181; <b>เปิดระบบ วันศุกร์ที่ 20 ธันวาคม พ.ศ. 2567 เวลา 08.30 น.</b><br />
+                            <p style="color: red; font-size: 0.95rem;" class="mb-1">&#128181; <b>ปิดระบบ วันศุกร์ที่ 10 มกราคม พ.ศ. 2568 เวลา 16.30 น.</b></p>
                             <table class="table table-bordered" width="100%" cellspacing="0">
                               <tr>
                                 <td width="200">
@@ -293,7 +293,7 @@ $fetid_re = mysqli_fetch_array($resultid_re);
             <footer class="sticky-footer bg-white">
               <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                  <span>Copyright &copy; 2024 Yupparaj Wittayalai School</span>
+                  <span>Copyright &copy; 2025 Yupparaj Wittayalai School</span>
                 </div>
               </div>
             </footer>

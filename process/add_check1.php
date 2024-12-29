@@ -23,7 +23,7 @@ if (isset($_POST['add_check1'])) {
     // $num_c = mysqli_num_rows($resultid_c);
     if ($num_c == 0) {
       // check 1
-      $idstudent = '66050001';
+      $idstudent = '68050001';
       $sql_r = "INSERT INTO `room` (`r_id`, `r_number`, `u_id`, `r_date`) VALUES (NULL, '$idstudent', '$u_id', current_timestamp());
       ";
       $result_r = mysqli_query($conn, $sql_r);

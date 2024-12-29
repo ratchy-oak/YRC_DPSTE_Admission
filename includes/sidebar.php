@@ -2,8 +2,8 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
   <!-- Sidebar - Brand -->
   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-    <div class="sidebar-brand-text mt-5">ระบบรับสมัครนักเรียน<br>โครงการห้องเรียน พสวท.(สู่ความเป็นเลิศ)<br><b style="color: lightgreen">(รอบที่ 2)</b>
-      <p style="color: yellow">ปีการศึกษา 2567</p>
+    <div class="sidebar-brand-text mt-5">ระบบรับสมัครนักเรียน<br>โครงการห้องเรียน พสวท.(สู่ความเป็นเลิศ)<br> <!-- <b style="color: lightgreen">(รอบที่ 2)</b> -->
+      <p style="color: yellow">ปีการศึกษา 2568</p>
     </div>
   </a>
   <br />
@@ -44,20 +44,21 @@
       เมนู
     </div>
     <li class="nav-item">
-      <a target="_blnak" class="nav-link" href="https://drive.google.com/file/d/1oMtzg4isOw-yfxE0cZyIiVSJtiShvDNM/view?usp=sharing">
+      <a target="_blnak" class="nav-link" href="https://drive.google.com/file/d/1ZF5RiVNRqgCFfjwAlmDzxIpS_GWSwkOy/view?usp=sharing">
         <i class="fas fa-fw fa-file-alt"></i>
         <span>ประกาศรับสมัคร</span></a>
     </li>
     <li class="nav-item">
-      <a target="_blnak" class="nav-link" href="https://drive.google.com/file/d/1bJtdIG63KpIFDMjlXd-vhzikAApHnX7V/view?usp=sharing">
+      <a target="_blnak" class="nav-link" href="https://drive.google.com/file/d/1BvBXmC4s8dzUx7VjqaDxXzgA_H6NlVZo/view?usp=sharing">
         <i class="fas fa-fw fa-file-alt"></i>
         <span>ดาวน์โหลดใบสมัคร</span></a>
     </li>
     <li class="nav-item">
-      <a target="_blnak" class="nav-link" href="https://drive.google.com/file/d/1OiKWDgVCV1i4X5zyHzFQ1IRdCmR6IrEy/view?usp=sharing">
+      <a target="_blnak" class="nav-link" href="https://drive.google.com/file/d/1phVCHvey5oo-aSJAsGHaNeUaEO_UaqNv/view?fbclid=IwY2xjawHPEYtleHRuA2FlbQIxMAABHaXGLm9DfFzEYy4w9AN-YwLC6kr4Ph0McVuA-iUDkk47fkvzuZpfoFqjEA_aem_jPG_GqaH0BdKqN1YkZeoGQ">
         <i class="fas fa-fw fa-file-alt"></i>
         <span>ตรวจสอบรายชื่อผู้มีสิทธิ์สมัครคัดเลือก</span></a>
     </li>
+
     <?php
     if ($_SESSION['permission'] != "2") {
       $sqll = "SELECT * FROM `register` WHERE `u_id` = '$_SESSION[id]' AND idregister != ''";
@@ -83,22 +84,7 @@
             <span>อัพโหลดหลักฐาน</span></a>
         </li>
       <?php } } } ?>
-      <!-- if ($numl == 1 && $fetl['s_check'] == '1') {
-      ?>
-        <li class="nav-item">
-          <a class="nav-link" href="print4-66.php">
-            <button class="btn btn-success" style="color: white;">
-              <span>พิมพ์บัตรประจำตัวสอบ</span>
-            </button>
-          </a>
-        </li>
-    <li class="nav-item">
-    <a class="nav-link" href="https://drive.google.com/drive/folders/199YOH_ImRpmLa0Ly-tl-diF2EL2o61lq?usp=share_link" target="_blank">
-      <button class="btn btn-danger" style="color: white;">
-        <span>รายชื่อผู้มีสิทธิ์สอบ</span>
-      </button>
-    </a>
-  </li> -->
+
   <hr class="sidebar-divider d-none d-md-block">
   <li class="nav-item">
     <a class="nav-link" href="process/p_logout.php">

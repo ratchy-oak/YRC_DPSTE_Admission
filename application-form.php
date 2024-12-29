@@ -63,7 +63,7 @@ $fet_user = mysqli_fetch_array($result_user);
                     <!-- Begin Page Content -->
                     <div class="container-fluid">
                         <!-- Page Heading -->
-                        <h1 class="h4 mb-2 text-gray-800">สมัครคัดเลือกเข้าเรียนโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ปีการศึกษา 2567</h1>
+                        <h1 class="h4 mb-2 text-gray-800">สมัครคัดเลือกเข้าเรียนโครงการห้องเรียน พสวท. (สู่ความเป็นเลิศ) ปีการศึกษา 2568</h1>
                         <!-- DataTales Example -->
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
@@ -185,7 +185,7 @@ $fet_user = mysqli_fetch_array($result_user);
                                         <div class="col-xl-12 mb-3">
                                             <div class="row">
                                                 <div class="col-xl-6">
-                                                    <label class="col-md-12 col-sm-12 col-form-label"><strong>โรงเรียน </strong><span style="color: red; font-weight: bold;">*</span></label>
+                                                    <label class="col-md-12 col-sm-12 col-form-label"><strong>ปัจจุบันกำลังศึกษาอยู่ ชั้น ม.3 โรงเรียน </strong><span style="color: red; font-weight: bold;">*</span></label>
                                                     <div class="col-md-12 col-sm-12">
                                                         <input name="school" class="form-control" type="text" required>
                                                     </div>
@@ -231,7 +231,7 @@ $fet_user = mysqli_fetch_array($result_user);
                                                     <input name="grade4" class="form-control" type="text" required>
                                                 </div>
                                                 <div class="mt-3">
-                                                    <span style="color: red; font-weight: bold;">ตามประกาศผลการสอบคัดเลือกนักเรียนเข้าโครงการห้องเรียน พสวท.<br/>(สู่ความเป็นเลิศ) ระดับมัธยมศึกษาตอนปลาย ประจำปีการศึกษา 2567 รอบที่ 1</span><br>
+                                                    <span style="color: red; font-weight: bold;">ตามประกาศผลการสอบคัดเลือกนักเรียนเข้าโครงการห้องเรียน พสวท.<br/>(สู่ความเป็นเลิศ) ระดับมัธยมศึกษาตอนปลาย ประจำปีการศึกษา 2568 รอบที่ 1</span><br>
                                                     <label class="col-md-12 col-sm-12 col-form-label">รายชื่อข้าพเจ้าอยู่ลำดับที่ <span style="color: red; font-weight: bold;">*</span></label>
                                                     <div class="col-md-3 col-sm-3">
                                                         <input name="sequence" class="form-control" type="text" required>
@@ -280,7 +280,7 @@ $fet_user = mysqli_fetch_array($result_user);
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; 2024 Yupparaj Wittayalai School</span>
+                        <span>Copyright &copy; 2025 Yupparaj Wittayalai School</span>
                     </div>
                 </div>
             </footer>
